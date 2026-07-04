@@ -80,7 +80,16 @@ export default function Home() {
         body: JSON.stringify({ storeId }),
       }).then(async (r) => {
         const data = await r.json();
-        if (!r.ok) throw new Error(data.error || "Fetch failed");
+        if (!r.ok) {
+          // Standardized error: { error, code, stage, retryable, timestamp }
+          const err = new Error(data.error || "Fetch failed") as Error & {
+            code?: string; stage?: string; retryable?: boolean;
+          };
+          err.code = data.code;
+          err.stage = data.stage;
+          err.retryable = data.retryable;
+          throw err;
+        }
         return data;
       }),
     onSuccess: (data) => {
@@ -88,9 +97,8 @@ export default function Home() {
       if (!data.asyncFetch) {
         queryClient.invalidateQueries({ queryKey: ["discounts", effectiveStoreId] });
       } else {
-        // For REWE (async): start polling
+        // For REWE (async): start polling — capped at 5 minutes (anti-loop)
         setAsyncFetching(true);
-        // Stop polling after 5 minutes
         setTimeout(() => setAsyncFetching(false), 300000);
       }
     },
@@ -136,7 +144,7 @@ export default function Home() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.2.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.3.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -226,12 +234,37 @@ export default function Home() {
                   <><Package className="w-4 h-4 mr-2" /> Fetch Discounts</>
                 )}
               </Button>
-              {fetchMutation.isError && (
-                <div className="mt-2 flex items-start gap-2 text-xs text-red-400">
-                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-                  <span>{(fetchMutation.error as Error).message}</span>
-                </div>
-              )}
+              {fetchMutation.isError && (() => {
+                const err = fetchMutation.error as Error & {
+                  code?: string; stage?: string; retryable?: boolean;
+                };
+                const isRetryable = err.retryable;
+                const errCode = err.code || "UNKNOWN";
+                const errStage = err.stage || "unknown";
+                return (
+                  <div className="mt-2 p-2 rounded-md bg-red-950/40 border border-red-800/50">
+                    <div className="flex items-start gap-2 text-xs text-red-300">
+                      <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                      <div className="flex-1 min-w-0">
+                        <div className="font-mono text-[10px] text-red-400 mb-1">
+                          {errCode} @ {errStage}
+                          {isRetryable && <span className="text-amber-400 ml-1">· retryable</span>}
+                        </div>
+                        <div className="text-red-200 break-words">{err.message}</div>
+                        {isRetryable && (
+                          <button
+                            onClick={() => fetchMutation.mutate(selectedStore.id)}
+                            disabled={fetchMutation.isPending}
+                            className="mt-2 px-2 py-1 text-[10px] rounded bg-red-900/60 hover:bg-red-900 text-red-100 disabled:opacity-50 transition"
+                          >
+                            {fetchMutation.isPending ? "Retrying..." : "Retry fetch"}
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
               {fetchMutation.isSuccess && (
                 <div className="mt-2 text-xs text-emerald-400">
                   {fetchMutation.data.asyncFetch
