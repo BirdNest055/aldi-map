@@ -26,7 +26,7 @@ const fmtPrice = (n: number | null, cur = "EUR") => {
 };
 
 const BRAND_COLORS: Record<string, string> = {
-  aldi-sued: "#1a7a3a",
+  "aldi-sued": "#1a7a3a",
   rewe: "#e30613",
 };
 
