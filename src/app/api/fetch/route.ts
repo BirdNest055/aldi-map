@@ -213,6 +213,23 @@ async function handler(req: NextRequest) {
         clientIp, Date.now() - t0, null,
       );
 
+      // Auto-create auto-fetch settings with 24h default if not yet configured.
+      // This implements the "first fetch auto-enables 24h" behavior.
+      let autoFetchCreated = false;
+      try {
+        const { getAutoFetchSettingsStorage } = await import("@/lib/auto-fetch/supabase-storage");
+        const autoFetchStorage = getAutoFetchSettingsStorage();
+        const existing = await autoFetchStorage.get(storeId);
+        if (!existing) {
+          await autoFetchStorage.upsert(storeId, true, 24); // 24h default
+          autoFetchCreated = true;
+          console.log(`[fetch] Auto-created auto-fetch settings for ${storeId} (24h default)`);
+        }
+      } catch (autoErr) {
+        // Non-fatal: don't fail the fetch just because we couldn't create auto-fetch settings
+        console.warn(`[fetch] Failed to auto-create auto-fetch settings for ${storeId}:`, autoErr);
+      }
+
       return NextResponse.json({
         success: true,
         storeId: storeId,
@@ -220,6 +237,7 @@ async function handler(req: NextRequest) {
         asyncFetch: true,
         estimatedTime: 60,
         durationMs: Date.now() - t0,
+        autoFetchCreated,
       });
     } catch (e: any) {
       if (e instanceof ApiError) {

@@ -45,6 +45,47 @@ CREATE INDEX IF NOT EXISTS idx_fetch_log_store ON fetch_log(store_id);
 CREATE INDEX IF NOT EXISTS idx_fetch_log_fetched ON fetch_log(fetched_at DESC);
 CREATE INDEX IF NOT EXISTS idx_fetch_log_success ON fetch_log(success);
 
+-- ──────────────────────────────────────────────────────────────────────────
+-- Auto-fetch settings (per-store, regional stores only)
+-- ALDI stores are exempt (national, handled by discount-fetcher-cli)
+-- ──────────────────────────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS auto_fetch_settings (
+  store_id TEXT PRIMARY KEY,
+  enabled BOOLEAN NOT NULL DEFAULT TRUE,
+  -- intervalHours must be one of: 0 (off), 24, 72, 168
+  interval_hours INTEGER NOT NULL DEFAULT 24
+    CHECK (interval_hours IN (0, 24, 72, 168)),
+  last_auto_fetched_at TIMESTAMPTZ,
+  last_auto_fetch_status TEXT
+    CHECK (last_auto_fetch_status IS NULL OR last_auto_fetch_status IN ('success', 'failed', 'skipped-rate-limit')),
+  consecutive_failures INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- Index for the scheduler's "find due stores" query:
+-- WHERE enabled = TRUE AND (last_auto_fetched_at IS NULL OR last_auto_fetched_at + interval_hours * INTERVAL '1 hour' <= NOW())
+CREATE INDEX IF NOT EXISTS idx_auto_fetch_due
+  ON auto_fetch_settings(enabled, last_auto_fetched_at)
+  WHERE enabled = TRUE;
+
+ALTER TABLE auto_fetch_settings ENABLE ROW LEVEL SECURITY;
+
+-- Trigger to keep updated_at fresh
+CREATE OR REPLACE FUNCTION update_auto_fetch_settings_updated_at()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_auto_fetch_settings_updated ON auto_fetch_settings;
+CREATE TRIGGER trg_auto_fetch_settings_updated
+  BEFORE UPDATE ON auto_fetch_settings
+  FOR EACH ROW
+  EXECUTE FUNCTION update_auto_fetch_settings_updated_at();
+
 ALTER TABLE stores ENABLE ROW LEVEL SECURITY;
 ALTER TABLE discounts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE fetch_log ENABLE ROW LEVEL SECURITY;
