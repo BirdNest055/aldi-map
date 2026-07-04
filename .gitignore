@@ -1,0 +1,14 @@
+node_modules
+.next
+.env
+*.log
+db/
+download/
+.zscripts/
+skills/
+upload/
+examples/
+mini-services/
+dev.log
+server.log
+.pzscripts/

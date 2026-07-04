@@ -1,0 +1,22 @@
+[
+  { "id": "aldi-munich-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 48.1371, "lng": 11.5754, "address": "Neuhauser Str. 37, 80331 München" },
+  { "id": "aldi-munich-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 48.1351, "lng": 11.5820, "address": "Rosenheimer Str. 15, 81667 München" },
+  { "id": "aldi-berlin-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 52.5200, "lng": 13.4050, "address": "Friedrichstr. 100, 10117 Berlin" },
+  { "id": "aldi-berlin-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 52.5100, "lng": 13.4200, "address": "Karl-Marx-Allee 78, 10243 Berlin" },
+  { "id": "aldi-hamburg-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 53.5511, "lng": 9.9937, "address": "Mönckebergstr. 7, 20095 Hamburg" },
+  { "id": "aldi-hamburg-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 53.5600, "lng": 10.0000, "address": "Eppendorfer Baum 25, 20253 Hamburg" },
+  { "id": "aldi-cologne-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 50.9413, "lng": 6.9583, "address": "Schildergasse 50, 50667 Köln" },
+  { "id": "aldi-cologne-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 50.9300, "lng": 6.9700, "address": "Aachener Str. 100, 50674 Köln" },
+  { "id": "aldi-frankfurt-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 50.1109, "lng": 8.6821, "address": "Zeil 106, 60313 Frankfurt" },
+  { "id": "aldi-frankfurt-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 50.1200, "lng": 8.6900, "address": "Berger Str. 200, 60385 Frankfurt" },
+  { "id": "aldi-stuttgart-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 48.7758, "lng": 9.1829, "address": "Königstr. 50, 70173 Stuttgart" },
+  { "id": "aldi-stuttgart-2", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 48.7800, "lng": 9.1900, "address": "Esslinger Str. 30, 70182 Stuttgart" },
+  { "id": "aldi-dusseldorf-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 51.2277, "lng": 6.7735, "address": "Schadowstr. 80, 40212 Düsseldorf" },
+  { "id": "aldi-leipzig-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 51.3397, "lng": 12.3731, "address": "Grimmaische Str. 30, 04109 Leipzig" },
+  { "id": "aldi-dortmund-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 51.5142, "lng": 7.4653, "address": "Westenhellweg 60, 44137 Dortmund" },
+  { "id": "aldi-essen-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 51.4556, "lng": 7.0116, "address": "Kettwiger Str. 40, 45127 Essen" },
+  { "id": "aldi-bremen-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 53.0793, "lng": 8.8017, "address": "Obernstr. 40, 28195 Bremen" },
+  { "id": "aldi-dresden-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 51.0504, "lng": 13.7373, "address": "Prager Str. 10, 01067 Dresden" },
+  { "id": "aldi-nuremberg-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 49.4521, "lng": 11.0767, "address": "Königstr. 60, 90402 Nürnberg" },
+  { "id": "aldi-hannover-1", "name": "ALDI SÜD", "brand": "aldi-sued", "lat": 52.3759, "lng": 9.7320, "address": "Georgstr. 30, 30159 Hannover" }
+]
