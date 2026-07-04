@@ -10,6 +10,10 @@ export interface Store {
   lat: number;
   lng: number;
   address: string;
+  offersUrl?: string | null;    // For REWE: store-specific offers URL
+  openingHours?: string | null; // OSM opening_hours string
+  source?: string;              // "manual" | "osm"
+  osmId?: number;
 }
 
 /** A single discount/deal for a product at a store */

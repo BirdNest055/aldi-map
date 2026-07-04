@@ -2,8 +2,11 @@
 
 import { useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import type { Store } from "@/lib/types";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -39,17 +42,48 @@ function createBrandIcon(brand: string, brandColors?: Record<string, string>) {
   return L.divIcon({
     html: `<div style="
       background: ${color};
-      width: 28px; height: 28px;
+      width: 24px; height: 24px;
       border-radius: 50% 50% 50% 0;
       transform: rotate(-45deg);
       border: 2px solid white;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       display: flex; align-items: center; justify-content: center;
-    "><span style="transform: rotate(45deg); color: white; font-weight: bold; font-size: 12px;">${label}</span></div>`,
+    "><span style="transform: rotate(45deg); color: white; font-weight: bold; font-size: 11px;">${label}</span></div>`,
     className: "brand-marker",
-    iconSize: [28, 28],
-    iconAnchor: [14, 28],
-    popupAnchor: [0, -28],
+    iconSize: [24, 24],
+    iconAnchor: [12, 24],
+    popupAnchor: [0, -24],
+  });
+}
+
+/** Custom cluster icon that shows count + brand-colored outer ring */
+function createClusterIcon(cluster: L.MarkerCluster, brandColors?: Record<string, string>) {
+  const count = cluster.getChildCount();
+  // Determine dominant brand in cluster
+  const brands: Record<string, number> = {};
+  cluster.getAllChildMarkers().forEach((m: any) => {
+    const brand = m?.options?.icon?.options?.className || "other";
+    brands[brand] = (brands[brand] || 0) + 1;
+  });
+  const dominantBrand = Object.entries(brands).sort((a, b) => b[1] - a[1])[0]?.[0] || "other";
+  const color = brandColors?.[dominantBrand] || "#666";
+
+  const size = count < 10 ? 36 : count < 100 ? 44 : count < 1000 ? 52 : 60;
+
+  return L.divIcon({
+    html: `<div style="
+      background: ${color};
+      width: ${size}px; height: ${size}px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.85);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: ${size < 44 ? 12 : 14}px;
+      font-family: system-ui, sans-serif;
+    ">${count}</div>`,
+    className: "brand-cluster",
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
   });
 }
 
@@ -64,24 +98,35 @@ export default function MapView({ stores, onSelectStore, flyTarget, brandColors 
         attribution='&copy; OpenStreetMap &copy; CARTO'
       />
       <FlyTo target={flyTarget} />
-      {stores.map((store) => (
-        <Marker
-          key={store.id}
-          position={[store.lat, store.lng]}
-          icon={createBrandIcon(store.brand, brandColors)}
-          eventHandlers={{ click: () => onSelectStore(store) }}>
-          <Popup>
-            <div className="min-w-[180px]">
-              <p className="font-semibold text-sm">{store.name}</p>
-              <p className="text-xs text-zinc-500 mt-1">{store.address}</p>
-              <span className="inline-block mt-2 px-2 py-0.5 text-xs rounded text-white"
-                style={{ backgroundColor: brandColors?.[store.brand] || "#888" }}>
-                {store.brand === "aldi-sued" ? "ALDI SÜD" : store.brand.toUpperCase()}
-              </span>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      <MarkerClusterGroup
+        chunkedLoading
+        maxClusterRadius={50}
+        showCoverageOnHover={false}
+        spiderfyOnMaxZoom={true}
+        iconCreateFunction={(cluster: L.MarkerCluster) => createClusterIcon(cluster, brandColors)}
+      >
+        {stores.map((store) => (
+          <Marker
+            key={store.id}
+            position={[store.lat, store.lng]}
+            icon={createBrandIcon(store.brand, brandColors)}
+            eventHandlers={{ click: () => onSelectStore(store) }}>
+            <Popup>
+              <div className="min-w-[180px]">
+                <p className="font-semibold text-sm">{store.name}</p>
+                <p className="text-xs text-zinc-500 mt-1">{store.address}</p>
+                <span className="inline-block mt-2 px-2 py-0.5 text-xs rounded text-white"
+                  style={{ backgroundColor: brandColors?.[store.brand] || "#888" }}>
+                  {store.brand === "aldi-sued" ? "ALDI SÜD" : store.brand.toUpperCase()}
+                </span>
+                {store.openingHours && (
+                  <p className="text-xs text-zinc-400 mt-2 font-mono">{store.openingHours}</p>
+                )}
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </MarkerClusterGroup>
     </MapContainer>
   );
 }
