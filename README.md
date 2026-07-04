@@ -1,9 +1,9 @@
 # Discount Map
 
-> **v1.3.0** — Interactive map of German supermarkets with discount fetching + comprehensive error handling.
+> **v1.4.0** — Interactive map of German supermarkets with discount fetching + per-store auto-fetch scheduling.
 
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://discount-map-birdnest055s-projects.vercel.app)
-[![Version](https://img.shields.io/badge/version-1.3.0-blue)](#)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue)](#)
 
 **Live:** https://discount-map-birdnest055s-projects.vercel.app
 
@@ -175,11 +175,58 @@ When a fetch fails, the sidebar shows:
 |---|---|
 | `SUPABASE_URL` | For REWE workflow to save discounts |
 | `SUPABASE_SECRET_KEY` | For REWE workflow to authenticate |
+| `CRON_SECRET` | Auth token for Vercel Cron → `/api/auto-fetch/scheduler` (any random string) |
+
+## Auto-fetch (regional stores)
+
+Regional stores (REWE, etc.) can be auto-fetched on a per-store schedule.
+ALDI stores are exempt — they share a national prospectus auto-fetched by
+`discount-fetcher-cli`'s expiry mode.
+
+### User-facing interval options
+
+| Option | intervalHours | Meaning |
+|---|---|---|
+| `24h` | 24 | Fetch every 24 hours (default on first manual fetch) |
+| `3d` | 72 | Fetch every 3 days |
+| `1w` | 168 | Fetch every week |
+| `off` | 0 | Disable auto-fetch for this store |
+
+### Behavior
+
+- When a user fetches a REWE store for the first time, auto-fetch is
+  **auto-enabled** with 24h default. A toast informs the user.
+- The user can change the interval or turn it off via the store sidebar.
+- The scheduler runs every hour via Vercel Cron. For each due store, it
+  triggers the existing REWE GHA workflow.
+- **Auto-disable**: after 3 consecutive failures, the store is auto-disabled.
+  The UI shows a warning and the user can re-enable manually.
+- **Recovery**: a single successful fetch resets `consecutiveFailures` to 0.
+
+### Anti-loop / anti-spam
+
+- Scheduler runs once per day at 06:00 UTC via Vercel Cron (Hobby tier limit;
+  upgrade to Pro for hourly)
+- Max 10 fetches per scheduler invocation (`maxFetchesPerRun`)
+- 2-second delay between fetches (respects GitHub's 15 req/min limit)
+- Each store fetched at most once per run (settings updated immediately)
+- 3 consecutive failures → auto-disable (no infinite retry loop)
+- All outcomes logged to `fetch_log` table with `client_ip='vercel-cron'`
+- No emails (silent)
+
+### Endpoints
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/auto-fetch/settings?storeId=X` | GET | Get current settings (returns `applicable: false` for ALDI) |
+| `/api/auto-fetch/settings` | PUT | Body: `{storeId, intervalOption: "24h"\|"3d"\|"1w"\|"off"}` |
+| `/api/auto-fetch/scheduler` | POST | Vercel Cron entry point. Requires `Authorization: Bearer $CRON_SECRET` |
 
 ## Version history
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4.0 | 2026-07-04 | Auto-fetch for regional stores: per-store GUI control (24h/3d/1w/off), Vercel Cron scheduler, auto-disable after 3 failures, fetch_log audit, 79 vitest tests |
 | 1.3.0 | 2026-07-04 | Comprehensive error handling: typed ApiError, fetch_log audit, error boundaries, retry-aware UI, health check |
 | 1.2.0 | 2026-07-04 | ALDI national dedup, auto-refresh after fetch, default price-asc sort |
 | 1.1.0 | 2026-07-04 | Renamed to discount fetcher, added REWE stores, brand filter, close button, version indicators |

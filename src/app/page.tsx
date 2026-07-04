@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Store, Discount, GeocodeResult } from "@/lib/types";
+import { AutoFetchSettings } from "@/components/AutoFetchSettings";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
@@ -144,7 +145,7 @@ export default function Home() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.3.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.4.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -277,6 +278,9 @@ export default function Home() {
                   <Loader2 className="w-3 h-3 animate-spin" /> Waiting for results...
                 </div>
               )}
+
+              {/* Auto-fetch settings (component handles ALDI case internally) */}
+              <AutoFetchSettings store={selectedStore} />
             </div>
 
             <div className="flex-1 overflow-y-auto p-4 space-y-2">
