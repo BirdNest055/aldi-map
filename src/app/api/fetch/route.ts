@@ -3,7 +3,7 @@ import { getRegistry } from "@/lib/fetcher/registry";
 import { getStoreProvider } from "@/lib/stores/json-provider";
 import { getStorage } from "@/lib/storage/supabase";
 import { MemoryRateLimiter } from "@/lib/fetcher/rate-limiter";
-import "@/lib/fetcher/plugins/aldi-sued";
+import "@/lib/fetcher/plugins/discount-fetcher-aldi";
 
 let _limiter: MemoryRateLimiter | null = null;
 function getLimiter() {
