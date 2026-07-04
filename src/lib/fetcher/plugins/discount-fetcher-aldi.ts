@@ -42,10 +42,10 @@ function parsePrice(p: string | undefined): number | null {
 }
 
 export class AldiSuedFetcher implements FetcherPlugin {
-  brand = "aldi-sued";
+  brand = "aldi";
 
   canFetch(store: Store): boolean {
-    return store.brand === "aldi-sued";
+    return store.brand === "aldi";
   }
 
   async fetch(store: Store): Promise<Discount[]> {

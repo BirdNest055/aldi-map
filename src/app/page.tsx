@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { Search, MapPin, Package, Loader2, AlertCircle } from "lucide-react";
+import { Search, MapPin, Package, Loader2, AlertCircle, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Store, Discount, GeocodeResult } from "@/lib/types";
 
-// Lazy-load the map (Leaflet needs window — can't SSR)
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
   loading: () => (
@@ -26,11 +25,18 @@ const fmtPrice = (n: number | null, cur = "EUR") => {
   return `${n.toFixed(2)} ${cur === "EUR" ? "€" : cur}`;
 };
 
+const BRAND_COLORS: Record<string, string> = {
+  aldi: "#1a7a3a",
+  rewe: "#e30613",
+};
+
 export default function Home() {
   const [selectedStore, setSelectedStore] = useState<Store | null>(null);
   const [flyTarget, setFlyTarget] = useState<{ lat: number; lng: number; zoom?: number; bounds?: [number, number, number, number] } | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<GeocodeResult[]>([]);
+  const [brandFilter, setBrandFilter] = useState<string>("all");
+  const [discountSearch, setDiscountSearch] = useState("");
 
   const { data: stores, isLoading: storesLoading } = useQuery({
     queryKey: ["stores"],
@@ -38,11 +44,25 @@ export default function Home() {
     staleTime: Infinity,
   });
 
+  const availableBrands = useMemo(() => {
+    if (!stores) return [];
+    return Array.from(new Set(stores.map((s) => s.brand))).sort();
+  }, [stores]);
+
+  const filteredStores = useMemo(() => {
+    if (!stores) return [];
+    if (brandFilter === "all") return stores;
+    return stores.filter((s) => s.brand === brandFilter);
+  }, [stores, brandFilter]);
+
   const { data: discounts, isLoading: discountsLoading } = useQuery({
     queryKey: ["discounts", selectedStore?.id],
     queryFn: () =>
       fetch(`/api/discounts?storeId=${selectedStore!.id}`).then((r) => r.json() as Promise<Discount[]>),
     enabled: !!selectedStore,
+    refetchInterval: (data) => {
+      return data?.length === 0 ? 10000 : false;
+    },
   });
 
   const fetchMutation = useMutation({
@@ -75,15 +95,26 @@ export default function Home() {
     setSearchQuery(result.displayName.split(",")[0]);
   };
 
+  const filteredDiscounts = useMemo(() => {
+    if (!discounts) return [];
+    if (!discountSearch) return discounts;
+    const q = discountSearch.toLowerCase();
+    return discounts.filter(
+      (d) =>
+        d.productTitle?.toLowerCase().includes(q) ||
+        d.brand?.toLowerCase().includes(q) ||
+        d.category?.toLowerCase().includes(q)
+    );
+  }, [discounts, discountSearch]);
+
   return (
     <div className="h-screen flex flex-col bg-zinc-950 text-zinc-100">
-      {/* Header */}
-      <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-4">
+      <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
           <h1 className="text-base font-semibold">Discount Map</h1>
         </div>
-        <div className="flex-1 flex items-center gap-2 max-w-md">
+        <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
             <Input
@@ -91,77 +122,77 @@ export default function Home() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              className="pl-9 bg-zinc-800 border-zinc-700"
+              className="pl-9 bg-zinc-800 border-zinc-700 h-9"
             />
             {searchResults.length > 0 && (
               <div className="absolute top-full left-0 right-0 mt-1 bg-zinc-800 border border-zinc-700 rounded-md shadow-lg z-[1001] max-h-60 overflow-y-auto">
                 {searchResults.map((r, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleSelectSearchResult(r)}
-                    className="w-full text-left px-3 py-2 text-sm hover:bg-zinc-700 truncate"
-                  >
+                  <button key={i} onClick={() => handleSelectSearchResult(r)}
+                    className="w-full text-left px-3 py-2 text-sm hover:bg-zinc-700 truncate">
                     {r.displayName}
                   </button>
                 ))}
               </div>
             )}
           </div>
-          <Button size="sm" variant="secondary" onClick={handleSearch}>
-            <Search className="w-4 h-4" />
-          </Button>
+        </div>
+        <div className="flex items-center gap-1">
+          <button onClick={() => setBrandFilter("all")}
+            className={`px-3 py-1.5 text-xs rounded-md font-medium transition ${brandFilter === "all" ? "bg-zinc-100 text-zinc-900" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}>
+            All
+          </button>
+          {availableBrands.map((brand) => (
+            <button key={brand} onClick={() => setBrandFilter(brand)}
+              className={`px-3 py-1.5 text-xs rounded-md font-medium transition flex items-center gap-1.5 ${brandFilter === brand ? "bg-zinc-100 text-zinc-900" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}>
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: BRAND_COLORS[brand] || "#888" }} />
+              {brand === "aldi" ? "ALDI" : brand === "rewe" ? "REWE" : brand}
+            </button>
+          ))}
         </div>
         {stores && (
-          <Badge variant="outline" className="text-zinc-400">
-            {stores.length} stores
-          </Badge>
+          <Badge variant="outline" className="text-zinc-400">{filteredStores.length} stores</Badge>
         )}
       </header>
 
-      {/* Main: map + sidebar */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Map */}
         <div className="flex-1 relative">
           {storesLoading ? (
             <div className="flex items-center justify-center h-full">
               <Loader2 className="w-8 h-8 animate-spin text-zinc-600" />
             </div>
-          ) : stores && stores.length > 0 ? (
-            <MapView
-              stores={stores}
-              selectedStore={selectedStore}
-              onSelectStore={setSelectedStore}
-              flyTarget={flyTarget}
-            />
+          ) : filteredStores.length > 0 ? (
+            <MapView stores={filteredStores} selectedStore={selectedStore} onSelectStore={setSelectedStore} flyTarget={flyTarget} brandColors={BRAND_COLORS} />
           ) : (
             <div className="flex items-center justify-center h-full text-zinc-500">
               <div className="text-center">
                 <MapPin className="w-8 h-8 mx-auto mb-2 opacity-50" />
-                <p className="text-sm">No stores found. Add stores to data/stores.json</p>
+                <p className="text-sm">No stores found.</p>
               </div>
             </div>
           )}
         </div>
 
-        {/* Sidebar */}
         {selectedStore && (
-          <aside className="w-80 border-l border-zinc-800 bg-zinc-900 overflow-y-auto flex flex-col">
-            <div className="p-4 border-b border-zinc-800">
-              <div className="flex items-start justify-between gap-2">
-                <div>
+          <aside className="w-full sm:w-80 border-l border-zinc-800 bg-zinc-900 overflow-y-auto flex flex-col">
+            <div className="p-4 border-b border-zinc-800 relative">
+              <button onClick={() => setSelectedStore(null)}
+                className="absolute top-3 right-3 p-1.5 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" aria-label="Close">
+                <X className="w-4 h-4" />
+              </button>
+              <div className="flex items-start gap-2 pr-8">
+                <div className="flex-1 min-w-0">
                   <h2 className="font-semibold text-sm">{selectedStore.name}</h2>
                   <p className="text-xs text-zinc-500 mt-1">{selectedStore.address}</p>
                 </div>
-                <Badge className="bg-emerald-900 text-emerald-300 border-emerald-700 shrink-0">
-                  {selectedStore.brand}
-                </Badge>
               </div>
-              <Button
-                className="w-full mt-3"
-                size="sm"
-                onClick={() => fetchMutation.mutate(selectedStore.id)}
-                disabled={fetchMutation.isPending}
-              >
+              <div className="flex items-center gap-2 mt-2">
+                <span className="inline-block px-2 py-0.5 text-xs rounded font-medium text-white"
+                  style={{ backgroundColor: BRAND_COLORS[selectedStore.brand] || "#888" }}>
+                  {selectedStore.brand === "aldi" ? "ALDI SÜD" : selectedStore.brand.toUpperCase()}
+                </span>
+              </div>
+              <Button className="w-full mt-3" size="sm"
+                onClick={() => fetchMutation.mutate(selectedStore.id)} disabled={fetchMutation.isPending}>
                 {fetchMutation.isPending ? (
                   <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Fetching...</>
                 ) : (
@@ -176,20 +207,30 @@ export default function Home() {
               )}
               {fetchMutation.isSuccess && (
                 <div className="mt-2 text-xs text-emerald-400">
-                  ✓ Fetched {fetchMutation.data.count} discounts
+                  {fetchMutation.data.asyncFetch ? `✓ Fetch triggered. Results in ~60s.` : `✓ Fetched ${fetchMutation.data.count} discounts`}
                 </div>
               )}
             </div>
 
-            {/* Discount list */}
             <div className="flex-1 overflow-y-auto p-4 space-y-2">
-              <h3 className="text-xs uppercase text-zinc-500 font-medium mb-2">Discounts</h3>
+              {discounts && discounts.length > 0 && (
+                <div className="relative mb-2">
+                  <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+                  <Input placeholder="Filter discounts..." value={discountSearch}
+                    onChange={(e) => setDiscountSearch(e.target.value)}
+                    className="pl-8 bg-zinc-800 border-zinc-700 h-8 text-xs" />
+                </div>
+              )}
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs uppercase text-zinc-500 font-medium">Discounts</h3>
+                {discounts && discounts.length > 0 && (
+                  <span className="text-xs text-zinc-500">{filteredDiscounts.length} / {discounts.length}</span>
+                )}
+              </div>
               {discountsLoading ? (
-                [...Array(3)].map((_, i) => (
-                  <Skeleton key={i} className="h-16 w-full bg-zinc-800" />
-                ))
-              ) : discounts && discounts.length > 0 ? (
-                discounts.map((d, i) => (
+                [...Array(3)].map((_, i) => (<Skeleton key={i} className="h-16 w-full bg-zinc-800" />))
+              ) : filteredDiscounts.length > 0 ? (
+                filteredDiscounts.map((d, i) => (
                   <Card key={i} className="bg-zinc-800/50 border-zinc-700/50">
                     <CardContent className="p-3">
                       <div className="flex items-start justify-between gap-2">
@@ -199,29 +240,24 @@ export default function Home() {
                           {d.category && <p className="text-xs text-zinc-500 mt-0.5 truncate">{d.category}</p>}
                         </div>
                         <div className="text-right shrink-0">
-                          {d.price !== null && d.regularPrice !== null && d.price < d.regularPrice ? (
-                            <>
-                              <p className="text-sm font-mono font-semibold text-emerald-400">
-                                {fmtPrice(d.price, d.currency)}
-                              </p>
-                              <p className="text-xs text-zinc-500 line-through">
-                                {fmtPrice(d.regularPrice, d.currency)}
-                              </p>
-                            </>
-                          ) : (
-                            <p className="text-sm font-mono font-semibold">{fmtPrice(d.price, d.currency)}</p>
+                          <p className="text-sm font-mono font-semibold">{fmtPrice(d.price, d.currency)}</p>
+                          {d.regularPrice !== null && d.price !== null && d.regularPrice > d.price && (
+                            <p className="text-xs text-zinc-500 line-through">{fmtPrice(d.regularPrice, d.currency)}</p>
                           )}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 ))
-              ) : (
+              ) : discounts && discounts.length === 0 ? (
                 <div className="text-center py-8 text-zinc-500">
                   <Package className="w-8 h-8 mx-auto mb-2 opacity-50" />
                   <p className="text-xs">No discounts yet. Click "Fetch Discounts" to load.</p>
+                  {selectedStore.brand === "rewe" && (
+                    <p className="text-xs mt-1 text-amber-500">REWE takes ~60s (async fetch).</p>
+                  )}
                 </div>
-              )}
+              ) : null}
             </div>
           </aside>
         )}
