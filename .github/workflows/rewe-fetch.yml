@@ -1,0 +1,139 @@
+name: REWE Fetch
+
+# Triggered by the aldi-map app when a user clicks "Fetch Discounts" on a REWE store.
+# The workflow runs the CloakBrowser-based fetcher, saves results to Supabase,
+# and the app polls for the results.
+
+on:
+  workflow_dispatch:
+    inputs:
+      store_url:
+        description: 'Full REWE store offers URL'
+        required: true
+        type: string
+      store_id:
+        description: 'Store ID from the map app'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install CloakBrowser + deps
+        run: |
+          pip install cloakbrowser
+          # CloakBrowser auto-downloads the stealth Chromium binary on first run
+
+      - name: Run REWE fetcher
+        id: fetch
+        env:
+          STORE_URL: ${{ inputs.store_url }}
+          STORE_ID: ${{ inputs.store_id }}
+        run: |
+          echo "Fetching offers from: $STORE_URL"
+          python3 fetchers/rewe_fetcher.py "$STORE_URL" > /tmp/rewe-result.json 2>/tmp/rewe-stderr.log
+          EXIT_CODE=$?
+          
+          # Show CloakBrowser logs
+          cat /tmp/rewe-stderr.log
+          
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "FETCH_FAILED=true" >> "$GITHUB_OUTPUT"
+            echo "::error::Fetch failed (exit $EXIT_CODE)"
+            cat /tmp/rewe-result.json
+            exit 1
+          fi
+          
+          echo "FETCH_SUCCESS=true" >> "$GITHUB_OUTPUT"
+          
+          # Show summary
+          python3 -c "
+          import json
+          d = json.load(open('/tmp/rewe-result.json'))
+          print(f'Store: {d[\"store\"][\"name\"]}')
+          print(f'Products: {d[\"count\"]}')
+          print(f'Price range: {min(p[\"price\"] for p in d[\"products\"]):.2f} - {max(p[\"price\"] for p in d[\"products\"]):.2f} EUR')
+          "
+
+      - name: Save to Supabase
+        if: steps.fetch.outputs.FETCH_SUCCESS == 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          STORE_ID: ${{ inputs.store_id }}
+        run: |
+          python3 << 'PYEOF'
+          import json, os, urllib.request
+
+          data = json.load(open('/tmp/rewe-result.json'))
+          store_id = os.environ['STORE_ID']
+          supabase_url = os.environ['SUPABASE_URL']
+          supabase_key = os.environ['SUPABASE_SECRET_KEY']
+
+          # Delete old discounts for this store
+          req = urllib.request.Request(
+              f'{supabase_url}/rest/v1/discounts?store_id=eq.{store_id}',
+              method='DELETE',
+              headers={
+                  'apikey': supabase_key,
+                  'Authorization': f'Bearer {supabase_key}',
+              }
+          )
+          urllib.request.urlopen(req)
+
+          # Insert new discounts
+          rows = []
+          for p in data['products']:
+              rows.append({
+                  'store_id': store_id,
+                  'product_title': p['productTitle'],
+                  'brand': p.get('brand'),
+                  'price': p['price'],
+                  'regular_price': p.get('regularPrice'),
+                  'currency': p['currency'],
+                  'category': p.get('category'),
+                  'valid_from': None,
+                  'valid_until': None,
+                  'fetched_at': p['fetchedAt'],
+              })
+
+          if rows:
+              body = json.dumps(rows).encode()
+              req = urllib.request.Request(
+                  f'{supabase_url}/rest/v1/discounts',
+                  data=body,
+                  method='POST',
+                  headers={
+                      'apikey': supabase_key,
+                      'Authorization': f'Bearer {supabase_key}',
+                      'Content-Type': 'application/json',
+                      'Prefer': 'return=minimal',
+                  }
+              )
+              urllib.request.urlopen(req)
+              print(f'Saved {len(rows)} discounts to Supabase for store {store_id}')
+          else:
+              print('No products to save')
+          PYEOF
+
+      - name: Upload result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rewe-result
+          path: /tmp/rewe-result.json
+          retention-days: 7
