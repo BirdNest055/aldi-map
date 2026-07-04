@@ -205,7 +205,8 @@ ALDI stores are exempt — they share a national prospectus auto-fetched by
 
 ### Anti-loop / anti-spam
 
-- Scheduler runs at most once per hour (Vercel Cron)
+- Scheduler runs once per day at 06:00 UTC via Vercel Cron (Hobby tier limit;
+  upgrade to Pro for hourly)
 - Max 10 fetches per scheduler invocation (`maxFetchesPerRun`)
 - 2-second delay between fetches (respects GitHub's 15 req/min limit)
 - Each store fetched at most once per run (settings updated immediately)
