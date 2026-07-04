@@ -2,10 +2,10 @@
 
 > **v1.3.0** — Interactive map of German supermarkets with discount fetching + comprehensive error handling.
 
-[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://aldi-map-birdnest055s-projects.vercel.app)
+[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://discount-map-birdnest055s-projects.vercel.app)
 [![Version](https://img.shields.io/badge/version-1.3.0-blue)](#)
 
-**Live:** https://aldi-map-birdnest055s-projects.vercel.app
+**Live:** https://discount-map-birdnest055s-projects.vercel.app
 
 ## What it does
 
@@ -72,8 +72,8 @@ User clicks "Fetch Discounts"
 ## Local development
 
 ```bash
-git clone https://github.com/BirdNest055/aldi-map.git
-cd aldi-map
+git clone https://github.com/BirdNest055/discount-map.git
+cd discount-map
 git checkout dev
 bun install
 bun run dev    # → http://localhost:3000

@@ -1,5 +1,5 @@
 /**
- * Standardized API error handling for aldi-map.
+ * Standardized API error handling for discount-map.
  *
  * GOALS
  * -----
