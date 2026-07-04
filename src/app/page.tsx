@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Search, MapPin, Package, Loader2, AlertCircle, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -26,17 +26,19 @@ const fmtPrice = (n: number | null, cur = "EUR") => {
 };
 
 const BRAND_COLORS: Record<string, string> = {
-  aldi-sued: "#1a7a3a",
+  "aldi-sued": "#1a7a3a",
   rewe: "#e30613",
 };
 
 export default function Home() {
+  const queryClient = useQueryClient();
   const [selectedStore, setSelectedStore] = useState<Store | null>(null);
   const [flyTarget, setFlyTarget] = useState<{ lat: number; lng: number; zoom?: number; bounds?: [number, number, number, number] } | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<GeocodeResult[]>([]);
   const [brandFilter, setBrandFilter] = useState<string>("all");
   const [discountSearch, setDiscountSearch] = useState("");
+  const [asyncFetching, setAsyncFetching] = useState(false);
 
   const { data: stores, isLoading: storesLoading } = useQuery({
     queryKey: ["stores"],
@@ -55,14 +57,19 @@ export default function Home() {
     return stores.filter((s) => s.brand === brandFilter);
   }, [stores, brandFilter]);
 
+  // Determine the effective store ID for discounts (ALDI = national)
+  const effectiveStoreId = useMemo(() => {
+    if (!selectedStore) return null;
+    if (selectedStore.brand === "aldi-sued") return "aldi-sued-national";
+    return selectedStore.id;
+  }, [selectedStore]);
+
   const { data: discounts, isLoading: discountsLoading } = useQuery({
-    queryKey: ["discounts", selectedStore?.id],
+    queryKey: ["discounts", effectiveStoreId],
     queryFn: () =>
-      fetch(`/api/discounts?storeId=${selectedStore!.id}`).then((r) => r.json() as Promise<Discount[]>),
-    enabled: !!selectedStore,
-    refetchInterval: (data) => {
-      return data?.length === 0 ? 10000 : false;
-    },
+      fetch(`/api/discounts?storeId=${effectiveStoreId}`).then((r) => r.json() as Promise<Discount[]>),
+    enabled: !!effectiveStoreId,
+    refetchInterval: asyncFetching ? 10000 : false,
   });
 
   const fetchMutation = useMutation({
@@ -76,6 +83,17 @@ export default function Home() {
         if (!r.ok) throw new Error(data.error || "Fetch failed");
         return data;
       }),
+    onSuccess: (data) => {
+      // For ALDI (national, instant): invalidate immediately to show results
+      if (!data.asyncFetch) {
+        queryClient.invalidateQueries({ queryKey: ["discounts", effectiveStoreId] });
+      } else {
+        // For REWE (async): start polling
+        setAsyncFetching(true);
+        // Stop polling after 5 minutes
+        setTimeout(() => setAsyncFetching(false), 300000);
+      }
+    },
   });
 
   const handleSearch = useCallback(async () => {
@@ -95,16 +113,22 @@ export default function Home() {
     setSearchQuery(result.displayName.split(",")[0]);
   };
 
-  const filteredDiscounts = useMemo(() => {
+  // Sort discounts by price ascending (cheapest first)
+  const sortedDiscounts = useMemo(() => {
     if (!discounts) return [];
-    if (!discountSearch) return discounts;
-    const q = discountSearch.toLowerCase();
-    return discounts.filter(
-      (d) =>
-        d.productTitle?.toLowerCase().includes(q) ||
-        d.brand?.toLowerCase().includes(q) ||
-        d.category?.toLowerCase().includes(q)
-    );
+    const filtered = discountSearch
+      ? discounts.filter(
+          (d) =>
+            d.productTitle?.toLowerCase().includes(discountSearch.toLowerCase()) ||
+            d.brand?.toLowerCase().includes(discountSearch.toLowerCase()) ||
+            d.category?.toLowerCase().includes(discountSearch.toLowerCase())
+        )
+      : discounts;
+    return [...filtered].sort((a, b) => {
+      const pa = a.price ?? Infinity;
+      const pb = b.price ?? Infinity;
+      return pa - pb;
+    });
   }, [discounts, discountSearch]);
 
   return (
@@ -112,7 +136,7 @@ export default function Home() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.1.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.2.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -175,7 +199,7 @@ export default function Home() {
         {selectedStore && (
           <aside className="w-full sm:w-80 border-l border-zinc-800 bg-zinc-900 overflow-y-auto flex flex-col">
             <div className="p-4 border-b border-zinc-800 relative">
-              <button onClick={() => setSelectedStore(null)}
+              <button onClick={() => { setSelectedStore(null); setAsyncFetching(false); }}
                 className="absolute top-3 right-3 p-1.5 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" aria-label="Close">
                 <X className="w-4 h-4" />
               </button>
@@ -188,8 +212,11 @@ export default function Home() {
               <div className="flex items-center gap-2 mt-2">
                 <span className="inline-block px-2 py-0.5 text-xs rounded font-medium text-white"
                   style={{ backgroundColor: BRAND_COLORS[selectedStore.brand] || "#888" }}>
-                  {selectedStore.brand === "aldi" ? "ALDI SÜD" : selectedStore.brand.toUpperCase()}
+                  {selectedStore.brand === "aldi-sued" ? "ALDI SÜD" : selectedStore.brand.toUpperCase()}
                 </span>
+                {selectedStore.brand === "aldi-sued" && (
+                  <span className="text-xs text-zinc-500">National prospectus</span>
+                )}
               </div>
               <Button className="w-full mt-3" size="sm"
                 onClick={() => fetchMutation.mutate(selectedStore.id)} disabled={fetchMutation.isPending}>
@@ -207,7 +234,14 @@ export default function Home() {
               )}
               {fetchMutation.isSuccess && (
                 <div className="mt-2 text-xs text-emerald-400">
-                  {fetchMutation.data.asyncFetch ? `✓ Fetch triggered. Results in ~60s.` : `✓ Fetched ${fetchMutation.data.count} discounts`}
+                  {fetchMutation.data.asyncFetch
+                    ? `✓ Fetch triggered. Checking for results...`
+                    : `✓ Fetched ${fetchMutation.data.count} discounts`}
+                </div>
+              )}
+              {asyncFetching && !discounts?.length && (
+                <div className="mt-2 text-xs text-amber-400 flex items-center gap-1">
+                  <Loader2 className="w-3 h-3 animate-spin" /> Waiting for results...
                 </div>
               )}
             </div>
@@ -224,13 +258,13 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <h3 className="text-xs uppercase text-zinc-500 font-medium">Discounts</h3>
                 {discounts && discounts.length > 0 && (
-                  <span className="text-xs text-zinc-500">{filteredDiscounts.length} / {discounts.length}</span>
+                  <span className="text-xs text-zinc-500">{sortedDiscounts.length} / {discounts.length}</span>
                 )}
               </div>
               {discountsLoading ? (
                 [...Array(3)].map((_, i) => (<Skeleton key={i} className="h-16 w-full bg-zinc-800" />))
-              ) : filteredDiscounts.length > 0 ? (
-                filteredDiscounts.map((d, i) => (
+              ) : sortedDiscounts.length > 0 ? (
+                sortedDiscounts.map((d, i) => (
                   <Card key={i} className="bg-zinc-800/50 border-zinc-700/50">
                     <CardContent className="p-3">
                       <div className="flex items-start justify-between gap-2">
