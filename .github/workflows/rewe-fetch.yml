@@ -33,14 +33,35 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install CloakBrowser + deps
+      - name: Install CloakBrowser + deps + fingerprint fonts
         run: |
           pip install cloakbrowser
           # CloakBrowser auto-downloads the stealth Chromium binary on first run
 
+          # Install font packages recommended by CloakBrowser docs:
+          # https://github.com/CloakHQ/cloakbrowser#font-setup-on-linux
+          # These prevent anti-bot canvas-hash mismatches (Kasada, Akamai, etc.)
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            fonts-noto-color-emoji \
+            fonts-freefont-ttf \
+            fonts-unifont \
+            fonts-ipafont-gothic \
+            fonts-wqy-zenhei \
+            fonts-tlwg-loma-otf \
+            fontconfig
+          # Refresh font cache so Chromium picks them up
+          sudo fc-cache -f
+          # Verify (show first 8 of each)
+          fc-list | wc -l | xargs -I{} echo "Total fonts installed: {}"
+          fc-list | grep -iE 'noto|freefont|unifont|ipa|wqy|loma' | head -8
+
       - name: Run REWE fetcher
-        id: fetch
         env:
+          # Silence the warning if any optional Windows fonts are missing
+          # (full Windows fonts require copying from a real Windows machine,
+          # which isn't feasible on GHA runners — see CloakBrowser docs)
+          CLOAKBROWSER_SUPPRESS_FONT_WARNING: "1"
           STORE_URL: ${{ inputs.store_url }}
           STORE_ID: ${{ inputs.store_id }}
         run: |
