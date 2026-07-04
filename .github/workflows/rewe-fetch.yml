@@ -68,9 +68,17 @@ jobs:
           echo "Fetching offers from: $STORE_URL"
           python3 fetchers/rewe_fetcher.py "$STORE_URL" > /tmp/rewe-result.json 2>/tmp/rewe-stderr.log
           EXIT_CODE=$?
-          
-          # Show CloakBrowser logs + any structured error output
-          cat /tmp/rewe-stderr.log
+
+          echo "=== Fetcher exit code: $EXIT_CODE ==="
+          echo "=== STDERR (CloakBrowser + structured error) ==="
+          if [ -s /tmp/rewe-stderr.log ]; then
+            cat /tmp/rewe-stderr.log
+          else
+            echo "(stderr was empty — fetcher may have crashed before emitting error)"
+          fi
+          echo "=== STDOUT (JSON result, first 500 chars) ==="
+          head -c 500 /tmp/rewe-result.json
+          echo ""
           
           if [ $EXIT_CODE -ne 0 ]; then
             # Parse structured error line: "error|<category>|<stage>|<signature>"
