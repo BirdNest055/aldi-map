@@ -52,7 +52,7 @@ export class AldiSuedFetcher implements FetcherPlugin {
     // Step 1: Follow redirect to get current week URL
     const landingRes = await fetch(LANDING_URL, {
       redirect: "follow",
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; aldi-map/1.0)" },
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; discount-map/1.0)" },
     });
     const currentUrl = landingRes.url;
 
@@ -81,7 +81,7 @@ export class AldiSuedFetcher implements FetcherPlugin {
       const hotspotUrl = `${base}/${slug}/page/${spread}/hotspots_data.json?version=${cacheToken}&page=1`;
       try {
         const res = await fetch(hotspotUrl, {
-          headers: { "User-Agent": "Mozilla/5.0 (compatible; aldi-map/1.0)" },
+          headers: { "User-Agent": "Mozilla/5.0 (compatible; discount-map/1.0)" },
         });
         if (!res.ok) continue;
         const hotspots = await res.json();

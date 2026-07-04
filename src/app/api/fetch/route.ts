@@ -153,7 +153,7 @@ async function handler(req: NextRequest) {
   // ─── REWE: async GitHub Actions trigger ────────────────────────────────
   if (store.brand === "rewe") {
     const ghToken = process.env.GITHUB_TOKEN;
-    const repo = "BirdNest055/aldi-map";
+    const repo = "BirdNest055/discount-map";
     const workflowId = "rewe-fetch.yml";
     const offersUrl = (store as any).offersUrl;
     if (!offersUrl) {

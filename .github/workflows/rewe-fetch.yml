@@ -1,6 +1,6 @@
 name: REWE Fetch
 
-# Triggered by the aldi-map app when a user clicks "Fetch Discounts" on a REWE store.
+# Triggered by the discount-map app when a user clicks "Fetch Discounts" on a REWE store.
 # The workflow runs the CloakBrowser-based fetcher, saves results to Supabase,
 # and the app polls for the results.
 
