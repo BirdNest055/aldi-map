@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Discount Map",
-  description: "Find supermarket discounts near you on an interactive map.",
+  description: "Find supermarket discounts near you on an interactive map. v1.1.0",
 };
 
 export default function RootLayout({

@@ -35,7 +35,7 @@ function FlyTo({ target }: { target: NonNullable<MapViewProps["flyTarget"]> | nu
 
 function createBrandIcon(brand: string, brandColors?: Record<string, string>) {
   const color = brandColors?.[brand] || "#3b82f6";
-  const label = brand === "aldi" ? "A" : brand === "rewe" ? "R" : brand.charAt(0).toUpperCase();
+  const label = brand === "aldi-sued" ? "A" : brand === "rewe" ? "R" : brand.charAt(0).toUpperCase();
   return L.divIcon({
     html: `<div style="
       background: ${color};
@@ -76,7 +76,7 @@ export default function MapView({ stores, onSelectStore, flyTarget, brandColors 
               <p className="text-xs text-zinc-500 mt-1">{store.address}</p>
               <span className="inline-block mt-2 px-2 py-0.5 text-xs rounded text-white"
                 style={{ backgroundColor: brandColors?.[store.brand] || "#888" }}>
-                {store.brand === "aldi" ? "ALDI SÜD" : store.brand.toUpperCase()}
+                {store.brand === "aldi-sued" ? "ALDI SÜD" : store.brand.toUpperCase()}
               </span>
             </div>
           </Popup>

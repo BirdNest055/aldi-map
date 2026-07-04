@@ -26,7 +26,7 @@ const fmtPrice = (n: number | null, cur = "EUR") => {
 };
 
 const BRAND_COLORS: Record<string, string> = {
-  aldi: "#1a7a3a",
+  aldi-sued: "#1a7a3a",
   rewe: "#e30613",
 };
 
@@ -112,7 +112,7 @@ export default function Home() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map</h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.1.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -145,7 +145,7 @@ export default function Home() {
             <button key={brand} onClick={() => setBrandFilter(brand)}
               className={`px-3 py-1.5 text-xs rounded-md font-medium transition flex items-center gap-1.5 ${brandFilter === brand ? "bg-zinc-100 text-zinc-900" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}>
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: BRAND_COLORS[brand] || "#888" }} />
-              {brand === "aldi" ? "ALDI" : brand === "rewe" ? "REWE" : brand}
+              {brand === "aldi-sued" ? "ALDI" : brand === "rewe" ? "REWE" : brand}
             </button>
           ))}
         </div>
