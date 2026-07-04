@@ -12,3 +12,4 @@ mini-services/
 dev.log
 server.log
 .pzscripts/
+tsconfig.tsbuildinfo

@@ -48,13 +48,31 @@ jobs:
           python3 fetchers/rewe_fetcher.py "$STORE_URL" > /tmp/rewe-result.json 2>/tmp/rewe-stderr.log
           EXIT_CODE=$?
           
-          # Show CloakBrowser logs
+          # Show CloakBrowser logs + any structured error output
           cat /tmp/rewe-stderr.log
           
           if [ $EXIT_CODE -ne 0 ]; then
+            # Parse structured error line: "error|<category>|<stage>|<signature>"
+            ERROR_LINE=$(grep -E '^error\|' /tmp/rewe-stderr.log | tail -1 || true)
+            ERROR_CATEGORY=$(echo "$ERROR_LINE" | cut -d'|' -f2 || echo "unknown")
+            ERROR_STAGE=$(echo "$ERROR_LINE" | cut -d'|' -f3 || echo "unknown")
+            ERROR_SIG=$(echo "$ERROR_LINE" | cut -d'|' -f4 || echo "n/a")
+            
             echo "FETCH_FAILED=true" >> "$GITHUB_OUTPUT"
-            echo "::error::Fetch failed (exit $EXIT_CODE)"
-            cat /tmp/rewe-result.json
+            echo "error_category=$ERROR_CATEGORY" >> "$GITHUB_OUTPUT"
+            echo "error_stage=$ERROR_STAGE" >> "$GITHUB_OUTPUT"
+            echo "error_sig=$ERROR_SIG" >> "$GITHUB_OUTPUT"
+            echo "exit_code=$EXIT_CODE" >> "$GITHUB_OUTPUT"
+            
+            # Categorize for the GHA annotation
+            case "$ERROR_CATEGORY" in
+              network)  MSG="Network error (CloakBrowser couldn't reach REWE)" ;;
+              parse)    MSG="Parse error (REWE page structure changed or Cloudflare blocked)" ;;
+              storage)  MSG="Storage error (couldn't write result file)" ;;
+              *)        MSG="Unknown fetcher error" ;;
+            esac
+            
+            echo "::error title=REWE fetch failed ($ERROR_CATEGORY@$ERROR_STAGE)::$MSG (exit=$EXIT_CODE, sig=$ERROR_SIG)"
             exit 1
           fi
           
@@ -70,6 +88,7 @@ jobs:
           "
 
       - name: Save to Supabase
+        id: save
         if: steps.fetch.outputs.FETCH_SUCCESS == 'true'
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -77,23 +96,34 @@ jobs:
           STORE_ID: ${{ inputs.store_id }}
         run: |
           python3 << 'PYEOF'
-          import json, os, urllib.request
+          import json, os, urllib.request, urllib.error, sys
 
           data = json.load(open('/tmp/rewe-result.json'))
           store_id = os.environ['STORE_ID']
           supabase_url = os.environ['SUPABASE_URL']
           supabase_key = os.environ['SUPABASE_SECRET_KEY']
 
+          headers = {
+              'apikey': supabase_key,
+              'Authorization': f'Bearer {supabase_key}',
+              'Content-Type': 'application/json',
+          }
+
           # Delete old discounts for this store
-          req = urllib.request.Request(
-              f'{supabase_url}/rest/v1/discounts?store_id=eq.{store_id}',
-              method='DELETE',
-              headers={
-                  'apikey': supabase_key,
-                  'Authorization': f'Bearer {supabase_key}',
-              }
-          )
-          urllib.request.urlopen(req)
+          try:
+              req = urllib.request.Request(
+                  f'{supabase_url}/rest/v1/discounts?store_id=eq.{store_id}',
+                  method='DELETE', headers=headers,
+              )
+              urllib.request.urlopen(req, timeout=30)
+          except urllib.error.HTTPError as e:
+              print(f"error|storage|delete-old|delete-failed", file=sys.stderr)
+              print(f"STORAGE ERROR [delete]: HTTP {e.code}: {e.read().decode()}", file=sys.stderr)
+              sys.exit(30)
+          except Exception as e:
+              print(f"error|storage|delete-old|{type(e).__name__}", file=sys.stderr)
+              print(f"STORAGE ERROR [delete]: {type(e).__name__}: {e}", file=sys.stderr)
+              sys.exit(30)
 
           # Insert new discounts
           rows = []
@@ -112,22 +142,74 @@ jobs:
               })
 
           if rows:
-              body = json.dumps(rows).encode()
+              try:
+                  body = json.dumps(rows).encode()
+                  req = urllib.request.Request(
+                      f'{supabase_url}/rest/v1/discounts',
+                      data=body, method='POST',
+                      headers={**headers, 'Prefer': 'return=minimal'},
+                  )
+                  urllib.request.urlopen(req, timeout=60)
+                  print(f'Saved {len(rows)} discounts to Supabase for store {store_id}')
+              except urllib.error.HTTPError as e:
+                  print(f"error|storage|insert|insert-failed", file=sys.stderr)
+                  print(f"STORAGE ERROR [insert]: HTTP {e.code}: {e.read().decode()}", file=sys.stderr)
+                  sys.exit(30)
+              except Exception as e:
+                  print(f"error|storage|insert|{type(e).__name__}", file=sys.stderr)
+                  print(f"STORAGE ERROR [insert]: {type(e).__name__}: {e}", file=sys.stderr)
+                  sys.exit(30)
+          else:
+              print('No products to save')
+          PYEOF
+
+      - name: Log fetch failure to Supabase fetch_log
+        if: always() && steps.fetch.outputs.FETCH_FAILED == 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          STORE_ID: ${{ inputs.store_id }}
+          ERROR_CATEGORY: ${{ steps.fetch.outputs.error_category }}
+          ERROR_STAGE: ${{ steps.fetch.outputs.error_stage }}
+          ERROR_SIG: ${{ steps.fetch.outputs.error_sig }}
+          EXIT_CODE: ${{ steps.fetch.outputs.exit_code }}
+        run: |
+          # Best-effort: log the failure to fetch_log for audit
+          python3 << 'PYEOF'
+          import json, os, urllib.request, urllib.error
+          try:
+              store_id = os.environ['STORE_ID']
+              supabase_url = os.environ['SUPABASE_URL']
+              supabase_key = os.environ['SUPABASE_SECRET_KEY']
+              err_cat = os.environ.get('ERROR_CATEGORY', 'unknown')
+              err_stage = os.environ.get('ERROR_STAGE', 'unknown')
+              err_sig = os.environ.get('ERROR_SIG', 'n/a')
+              exit_code = os.environ.get('EXIT_CODE', '50')
+
+              body = json.dumps({
+                  'store_id': store_id,
+                  'fetched_at': __import__('datetime').datetime.utcnow().isoformat() + 'Z',
+                  'success': False,
+                  'error': f'{err_cat}@{err_stage} (sig={err_sig}, exit={exit_code})',
+                  'client_ip': 'github-actions',
+                  'duration_ms': None,
+                  'count': None,
+              }).encode()
+
               req = urllib.request.Request(
-                  f'{supabase_url}/rest/v1/discounts',
-                  data=body,
-                  method='POST',
+                  f'{supabase_url}/rest/v1/fetch_log',
+                  data=body, method='POST',
                   headers={
                       'apikey': supabase_key,
                       'Authorization': f'Bearer {supabase_key}',
                       'Content-Type': 'application/json',
                       'Prefer': 'return=minimal',
-                  }
+                  },
               )
-              urllib.request.urlopen(req)
-              print(f'Saved {len(rows)} discounts to Supabase for store {store_id}')
-          else:
-              print('No products to save')
+              urllib.request.urlopen(req, timeout=15)
+              print(f'Logged fetch failure to fetch_log for store {store_id}')
+          except Exception as e:
+              print(f'WARNING: could not log to fetch_log: {e}')
           PYEOF
 
       - name: Upload result artifact

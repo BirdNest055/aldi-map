@@ -30,12 +30,20 @@ CREATE TABLE IF NOT EXISTS fetch_log (
   fetched_at TIMESTAMPTZ DEFAULT NOW(),
   success BOOLEAN NOT NULL,
   error TEXT,
-  client_ip TEXT
+  client_ip TEXT,
+  duration_ms INTEGER,
+  count INTEGER
 );
+
+-- Backfill columns for existing installs (idempotent)
+ALTER TABLE fetch_log ADD COLUMN IF NOT EXISTS duration_ms INTEGER;
+ALTER TABLE fetch_log ADD COLUMN IF NOT EXISTS count INTEGER;
 
 CREATE INDEX IF NOT EXISTS idx_discounts_store ON discounts(store_id);
 CREATE INDEX IF NOT EXISTS idx_discounts_fetched ON discounts(fetched_at DESC);
 CREATE INDEX IF NOT EXISTS idx_fetch_log_store ON fetch_log(store_id);
+CREATE INDEX IF NOT EXISTS idx_fetch_log_fetched ON fetch_log(fetched_at DESC);
+CREATE INDEX IF NOT EXISTS idx_fetch_log_success ON fetch_log(success);
 
 ALTER TABLE stores ENABLE ROW LEVEL SECURITY;
 ALTER TABLE discounts ENABLE ROW LEVEL SECURITY;

@@ -1,9 +1,9 @@
 # Discount Map
 
-> **v1.1.0** — Interactive map of German supermarkets with discount fetching.
+> **v1.3.0** — Interactive map of German supermarkets with discount fetching + comprehensive error handling.
 
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://aldi-map-birdnest055s-projects.vercel.app)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue)](#)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue)](#)
 
 **Live:** https://aldi-map-birdnest055s-projects.vercel.app
 
@@ -94,6 +94,71 @@ bun run lint   # eslint
 | `/api/discounts?storeId=X` | GET | Cached discounts from Supabase |
 | `/api/fetch` | POST | Trigger fetch (ALDI: inline, REWE: GitHub Actions) |
 | `/api/search?q=Berlin` | GET | City search via Nominatim |
+| `/api/health` | GET | Health check (Supabase + env vars) — for uptime monitors |
+
+## Error handling
+
+### Standardized API error response
+
+All API routes return errors in this shape (see `src/lib/errors.ts`):
+
+```json
+{
+  "error": "ALDI fetch timed out after 30s",
+  "code": "TIMEOUT_ERROR",
+  "stage": "timeout",
+  "retryable": true,
+  "timestamp": "2026-07-04T20:30:00.000Z",
+  "storeId": "aldi-sued-national",
+  "cause": "AbortError"
+}
+```
+
+| Code | HTTP | Retryable | When |
+|---|---|---|---|
+| `NETWORK_ERROR` | 502 | Yes | Upstream site unreachable |
+| `PARSE_ERROR` | 502 | No | Upstream returned malformed response |
+| `STORAGE_ERROR` | 500 | No | Supabase write/read failed |
+| `RATE_LIMITED` | 429 | Yes (after cooldown) | Too many fetches from this IP |
+| `NOT_FOUND` | 404 | No | Store ID doesn't exist |
+| `CONFIG_ERROR` | 500 | No | Missing env var or bad config |
+| `UPSTREAM_ERROR` | 502 | Yes | GitHub Actions trigger failed |
+| `TIMEOUT_ERROR` | 504 | Yes | Fetch exceeded 30s ceiling |
+| `INTERNAL_ERROR` | 500 | No | Unexpected server error |
+
+### Anti-loop guarantees
+
+- **Server-side**: NO automatic retries. Single attempt per request.
+- **Client-side**: retry button only shown for `retryable=true` errors. Manual click required.
+- **Rate limiter**: 30s cooldown per IP, regardless of error/success.
+- **REWE polling**: capped at 5 minutes (30 polls × 10s interval), then stops.
+- **No recursive triggers**: one user click = one fetch, no auto-refetch loops.
+
+### Anti-spam guarantees
+
+- No emails sent from this app (UI is the notification).
+- All fetch attempts (success AND failure) are logged to Supabase `fetch_log` table with:
+  - `store_id`, `fetched_at`, `success` (bool), `error` (text), `client_ip`, `duration_ms`, `count`
+- Query `fetch_log` to audit fetch history:
+  ```sql
+  SELECT store_id, fetched_at, success, error, duration_ms, count
+  FROM fetch_log
+  ORDER BY fetched_at DESC
+  LIMIT 50;
+  ```
+
+### Client UI error display
+
+When a fetch fails, the sidebar shows:
+- Error code + stage (e.g. `TIMEOUT_ERROR @ timeout`)
+- Human-readable message
+- "retryable" badge if the user can retry
+- "Retry fetch" button (only for retryable errors)
+
+### Error boundaries
+
+- `src/app/error.tsx` — route-level boundary, catches render errors with a "Try again" button
+- `src/app/global-error.tsx` — last-resort boundary for errors in the root layout
 
 ## Environment variables
 
@@ -115,6 +180,8 @@ bun run lint   # eslint
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.3.0 | 2026-07-04 | Comprehensive error handling: typed ApiError, fetch_log audit, error boundaries, retry-aware UI, health check |
+| 1.2.0 | 2026-07-04 | ALDI national dedup, auto-refresh after fetch, default price-asc sort |
 | 1.1.0 | 2026-07-04 | Renamed to discount fetcher, added REWE stores, brand filter, close button, version indicators |
 | 1.0.0 | 2026-07-04 | Initial release: ALDI map, fetch, Supabase, city search, rate limiting |
 
