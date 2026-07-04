@@ -116,5 +116,5 @@ export class AldiSuedFetcher implements FetcherPlugin {
 }
 
 // Auto-register on import
-import { getRegistry } from "./registry";
+import { getRegistry } from "../registry";
 getRegistry().register(new AldiSuedFetcher());
