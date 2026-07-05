@@ -13,3 +13,4 @@ dev.log
 server.log
 .pzscripts/
 tsconfig.tsbuildinfo
+data/rewe-discovery-progress.json
