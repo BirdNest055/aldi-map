@@ -1,9 +1,10 @@
 # Discount Map
 
-> **v1.4.0** — Interactive map of German supermarkets with discount fetching + per-store auto-fetch scheduling.
+> **v1.5.0** — Interactive map of 2,186 German supermarkets (REWE + ALDI SÜD) with discount fetching + per-store auto-fetch scheduling.
 
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://discount-map-birdnest055s-projects.vercel.app)
-[![Version](https://img.shields.io/badge/version-1.4.0-blue)](#)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue)](#)
+[![Stores](https://img.shields.io/badge/stores-2,186-green)](#)
 
 **Live:** https://discount-map-birdnest055s-projects.vercel.app
 
@@ -226,6 +227,7 @@ ALDI stores are exempt — they share a national prospectus auto-fetched by
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.5.0 | 2026-07-04 | 2,186 OSM stores (REWE + ALDI SÜD nationwide), marker clustering, opening hours in sidebar, is_on_sale generated column |
 | 1.4.0 | 2026-07-04 | Auto-fetch for regional stores: per-store GUI control (24h/3d/1w/off), Vercel Cron scheduler, auto-disable after 3 failures, fetch_log audit, 79 vitest tests |
 | 1.3.0 | 2026-07-04 | Comprehensive error handling: typed ApiError, fetch_log audit, error boundaries, retry-aware UI, health check |
 | 1.2.0 | 2026-07-04 | ALDI national dedup, auto-refresh after fetch, default price-asc sort |
