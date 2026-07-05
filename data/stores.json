@@ -2324,7 +2324,8 @@
     "source": "osm",
     "osmId": 278048843,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rommerskirchen/1765215/rewe-markt-venloer-str-2/",
+    "reweId": "1765215"
   },
   {
     "id": "rewe-osm-278983370",
@@ -2438,7 +2439,8 @@
     "source": "osm",
     "osmId": 298549571,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oestrich-winkel-winkel/1765203/rewe-markt-hauptstr-103a/",
+    "reweId": "1765203"
   },
   {
     "id": "rewe-osm-310804556",
@@ -2450,7 +2452,8 @@
     "source": "osm",
     "osmId": 310804556,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/240359/rewe-markt-eltviller-str-19-21/",
+    "reweId": "240359"
   },
   {
     "id": "rewe-osm-317183872",
@@ -2669,7 +2672,8 @@
     "source": "osm",
     "osmId": 354695596,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/240464/rewe-markt-sonnenberger-str-96/",
+    "reweId": "240464"
   },
   {
     "id": "rewe-osm-356879620",
@@ -2681,7 +2685,8 @@
     "source": "osm",
     "osmId": 356879620,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wirges/1761496/rewe-center-samoborstr-5/",
+    "reweId": "1761496"
   },
   {
     "id": "rewe-osm-360389419",
@@ -2745,7 +2750,8 @@
     "source": "osm",
     "osmId": 367088195,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neustadt-adweinstrasse-mussbach/831087/rewe-markt-meckenheimer-str-15/",
+    "reweId": "831087"
   },
   {
     "id": "rewe-osm-370779487",
@@ -3061,7 +3067,8 @@
     "source": "osm",
     "osmId": 492918058,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rheinfelden/840148/rewe-markt-nollinger-str-5/",
+    "reweId": "840148"
   },
   {
     "id": "rewe-osm-503734099",
@@ -3112,7 +3119,8 @@
     "source": "osm",
     "osmId": 535084885,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/selters/8534595/rewe-markt-bahnhofstr-31/",
+    "reweId": "8534595"
   },
   {
     "id": "rewe-osm-539073107",
@@ -3188,7 +3196,8 @@
     "source": "osm",
     "osmId": 592159718,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schmallenberg/1701700/rewe-markt-unterm-werth-24/",
+    "reweId": "1701700"
   },
   {
     "id": "rewe-osm-599427075",
@@ -3200,7 +3209,8 @@
     "source": "osm",
     "osmId": 599427075,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/231016/rewe-center-bahnhofsplatz-3/",
+    "reweId": "231016"
   },
   {
     "id": "rewe-osm-648869918",
@@ -3225,7 +3235,8 @@
     "source": "osm",
     "osmId": 649559537,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/selfkant-tueddern/1765141/rewe-markt-in-der-fummer-1/",
+    "reweId": "1765141"
   },
   {
     "id": "rewe-osm-652805767",
@@ -3325,7 +3336,8 @@
     "source": "osm",
     "osmId": 768885929,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbadendotzheim/240172/rewe-markt-flachstr-13/",
+    "reweId": "240172"
   },
   {
     "id": "rewe-osm-787691299",
@@ -3413,7 +3425,8 @@
     "source": "osm",
     "osmId": 828577564,
     "openingHours": "Mo-Sa 07:00-21:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rengsdorf/1765259/rewe-markt-westerwaldstr-95/",
+    "reweId": "1765259"
   },
   {
     "id": "rewe-osm-833338856",
@@ -3425,7 +3438,8 @@
     "source": "osm",
     "osmId": 833338856,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/240348/rewe-markt-taunusstr-66/",
+    "reweId": "240348"
   },
   {
     "id": "rewe-osm-861593449",
@@ -3475,7 +3489,8 @@
     "source": "osm",
     "osmId": 917026375,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/speyer/840838/rewe-markt-iggelheimer-str-16/",
+    "reweId": "840838"
   },
   {
     "id": "rewe-osm-925330190",
@@ -3487,7 +3502,8 @@
     "source": "osm",
     "osmId": 925330190,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/speyer/840833/rewe-markt-maximilianstr-50-51/",
+    "reweId": "840833"
   },
   {
     "id": "rewe-osm-933344955",
@@ -3600,7 +3616,8 @@
     "source": "osm",
     "osmId": 1072434038,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weil-am-rhein/840606/rewe-markt-hauptstr-206/",
+    "reweId": "840606"
   },
   {
     "id": "rewe-osm-1128836201",
@@ -3664,7 +3681,8 @@
     "source": "osm",
     "osmId": 1240272396,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/240466/rewe-markt-moritzstr-30/",
+    "reweId": "240466"
   },
   {
     "id": "rewe-osm-1261408075",
@@ -3728,7 +3746,8 @@
     "source": "osm",
     "osmId": 1318842983,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbadenbiebrich/8547003/rewe-markt-rathausstr-32/",
+    "reweId": "8547003"
   },
   {
     "id": "rewe-osm-1319968079",
@@ -3753,7 +3772,8 @@
     "source": "osm",
     "osmId": 1329549318,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oestrich-winkel-oestrich/240066/rewe-markt-rheingaustr-13a/",
+    "reweId": "240066"
   },
   {
     "id": "rewe-osm-1337589426",
@@ -3829,7 +3849,8 @@
     "source": "osm",
     "osmId": 1348214955,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/waldfeucht/1765122/rewe-markt-raiffeisenstr-2/",
+    "reweId": "1765122"
   },
   {
     "id": "rewe-osm-1363580717",
@@ -3931,7 +3952,8 @@
     "source": "osm",
     "osmId": 1551943782,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/saarbruecken/840254/rewe-markt-am-rastpfuhl-2a/",
+    "reweId": "840254"
   },
   {
     "id": "rewe-osm-1600994507",
@@ -3956,7 +3978,8 @@
     "source": "osm",
     "osmId": 1612195012,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schiffweiler-landsweiler/840907/rewe-markt-kreisstr-29/",
+    "reweId": "840907"
   },
   {
     "id": "rewe-osm-1640890564",
@@ -3968,7 +3991,8 @@
     "source": "osm",
     "osmId": 1640890564,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weil-am-rhein/840248/rewe-markt-hauptstr-335/",
+    "reweId": "840248"
   },
   {
     "id": "rewe-osm-1643958308",
@@ -4019,7 +4043,8 @@
     "source": "osm",
     "osmId": 1713874299,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/noervenich/321044/rewe-markt-gewerbepark-51/",
+    "reweId": "321044"
   },
   {
     "id": "rewe-osm-1738225498",
@@ -4134,7 +4159,8 @@
     "source": "osm",
     "osmId": 2023196604,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neuerburg/1763120/rewe-markt-wabecostr-5/",
+    "reweId": "1763120"
   },
   {
     "id": "rewe-osm-2042742808",
@@ -4172,7 +4198,8 @@
     "source": "osm",
     "osmId": 2132656324,
     "openingHours": "Mo-Sa 07:00-22:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neuwied/241191/rewe-center-koenigsberger-str-4/",
+    "reweId": "241191"
   },
   {
     "id": "rewe-osm-2146265778",
@@ -4362,7 +4389,8 @@
     "source": "osm",
     "osmId": 2969173180,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wiesbaden/241175/rewe-markt-bleichstrasse-2/",
+    "reweId": "241175"
   },
   {
     "id": "rewe-osm-2989564874",
@@ -4387,7 +4415,8 @@
     "source": "osm",
     "osmId": 2989662059,
     "openingHours": "Mo-Sa 07:00-21:45",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neuwied/440669/rewe-markt-sohler-weg-11/",
+    "reweId": "440669"
   },
   {
     "id": "rewe-osm-3114391787",
@@ -4438,7 +4467,8 @@
     "source": "osm",
     "osmId": 3189618354,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rastatt/831075/rewe-markt-joseph-von-eichendorff-weg-2/",
+    "reweId": "831075"
   },
   {
     "id": "rewe-osm-3211789232",
@@ -4502,7 +4532,8 @@
     "source": "osm",
     "osmId": 3391154582,
     "openingHours": "Mo-Sa 08:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/siegen-wittgenstein/1940284/rewe-markt-am-bahnhof-40/",
+    "reweId": "1940284"
   },
   {
     "id": "rewe-osm-3399362693",
@@ -4591,7 +4622,8 @@
     "source": "osm",
     "osmId": 3642113726,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/nierstein/1464183/rewe-markt-spiegelbergstr-71/",
+    "reweId": "1464183"
   },
   {
     "id": "rewe-osm-3678061300",
@@ -4603,7 +4635,8 @@
     "source": "osm",
     "osmId": 3678061300,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/speicher/1765084/rewe-markt-kapellenstr-65/",
+    "reweId": "1765084"
   },
   {
     "id": "rewe-osm-3755860979",
@@ -4628,7 +4661,8 @@
     "source": "osm",
     "osmId": 3760787919,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/worms/862027/rewe-markt-bebelstr-8/",
+    "reweId": "862027"
   },
   {
     "id": "rewe-osm-3814544120",
@@ -4665,7 +4699,8 @@
     "source": "osm",
     "osmId": 3959325358,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rheinstetten/831076/rewe-markt-nell-breuning-ring-25/",
+    "reweId": "831076"
   },
   {
     "id": "rewe-osm-4001928237",
@@ -4831,7 +4866,8 @@
     "source": "osm",
     "osmId": 5000786921,
     "openingHours": "Mo-Sa 07:00-21:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/uebach-palenberg/1765498/rewe-markt-am-wasserturm-11-17/",
+    "reweId": "1765498"
   },
   {
     "id": "rewe-osm-5091096493",
@@ -4958,7 +4994,8 @@
     "source": "osm",
     "osmId": 5435655297,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oberkirch/565277/rewe-markt-renchener-str-3/",
+    "reweId": "565277"
   },
   {
     "id": "rewe-osm-5507870889",
@@ -5123,7 +5160,8 @@
     "source": "osm",
     "osmId": 6694042761,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/waldboeckelheim/840627/rewe-markt-am-welschberg-1/",
+    "reweId": "840627"
   },
   {
     "id": "rewe-osm-6802028127",
@@ -5200,7 +5238,8 @@
     "source": "osm",
     "osmId": 7238507097,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/solingen/1356309/rewe-markt-walter-dodde-str-7/",
+    "reweId": "1356309"
   },
   {
     "id": "rewe-osm-7379684156",
@@ -5326,7 +5365,8 @@
     "source": "osm",
     "osmId": 7471623176,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rheinzabern/840192/rewe-markt-jockgrimer-str-41/",
+    "reweId": "840192"
   },
   {
     "id": "rewe-osm-7804314299",
@@ -5377,7 +5417,8 @@
     "source": "osm",
     "osmId": 8173142585,
     "openingHours": "Mo-Sa 07:00-21:30",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rheinbach/1478653/rewe-center-an-der-alten-molkerei-3/",
+    "reweId": "1478653"
   },
   {
     "id": "rewe-osm-8296998674",
@@ -5513,7 +5554,8 @@
     "source": "osm",
     "osmId": 10048755319,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muellheim/565890/rewe-markt-moltkeplatz-5/",
+    "reweId": "565890"
   },
   {
     "id": "rewe-osm-10058455012",
@@ -5551,7 +5593,8 @@
     "source": "osm",
     "osmId": 10083789612,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weil-am-rhein/211017/rewe-markt-europaplatz-1/",
+    "reweId": "211017"
   },
   {
     "id": "rewe-osm-10125905490",
@@ -5627,7 +5670,8 @@
     "source": "osm",
     "osmId": 10798918686,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/nistertal/1765446/rewe-markt-hornisterstr-4/",
+    "reweId": "1765446"
   },
   {
     "id": "rewe-osm-10801658218",
@@ -5726,7 +5770,8 @@
     "source": "osm",
     "osmId": 11868198435,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/waldbronn/8536918/rewe-markt-talstr-12/",
+    "reweId": "8536918"
   },
   {
     "id": "rewe-osm-11907012650",
@@ -6219,7 +6264,8 @@
     "source": "osm",
     "osmId": 142006030,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ulmeselsberg/865772/rewe-markt-virchowstr-2/",
+    "reweId": "865772"
   },
   {
     "id": "rewe-osm-144245074",
@@ -6317,7 +6363,8 @@
     "source": "osm",
     "osmId": 243876729,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/tuebingen-innenstadt/840353/rewe-markt-europaplatz-5/",
+    "reweId": "840353"
   },
   {
     "id": "rewe-osm-246007129",
@@ -6394,7 +6441,8 @@
     "source": "osm",
     "osmId": 249561850,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/plochingen/865786/rewe-markt-neckarstrasse-3/",
+    "reweId": "865786"
   },
   {
     "id": "rewe-osm-251161515",
@@ -6468,7 +6516,8 @@
     "source": "osm",
     "osmId": 261644500,
     "openingHours": "Mo-Sa 06:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rednitzhembach/1466168/rewe-markt-rother-str-44/",
+    "reweId": "1466168"
   },
   {
     "id": "rewe-osm-262518502",
@@ -6492,7 +6541,8 @@
     "source": "osm",
     "osmId": 262528606,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/tuebingen/831027/rewe-markt-mohlstr-26/",
+    "reweId": "831027"
   },
   {
     "id": "rewe-osm-264142791",
@@ -6542,7 +6592,8 @@
     "source": "osm",
     "osmId": 265727467,
     "openingHours": "Mo-Sa 08:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgartmitte/840344/rewe-markt-olgastr-86/",
+    "reweId": "840344"
   },
   {
     "id": "rewe-osm-267084326",
@@ -6744,7 +6795,8 @@
     "source": "osm",
     "osmId": 276670220,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/singen/840237/rewe-markt-zolltafel-4/",
+    "reweId": "840237"
   },
   {
     "id": "rewe-osm-278689527",
@@ -6922,7 +6974,8 @@
     "source": "osm",
     "osmId": 290007843,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/langenzenn/461907/rewe-markt-nuernberger-str-50/",
+    "reweId": "461907"
   },
   {
     "id": "rewe-osm-291637757",
@@ -6998,7 +7051,8 @@
     "source": "osm",
     "osmId": 294699136,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rosbachrodheim/240313/rewe-markt-im-seelhof-1/",
+    "reweId": "240313"
   },
   {
     "id": "rewe-osm-295092438",
@@ -7086,7 +7140,8 @@
     "source": "osm",
     "osmId": 304684688,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ohrdruf/1931064/rewe-markt-suhler-str-12/",
+    "reweId": "1931064"
   },
   {
     "id": "rewe-osm-305217401",
@@ -7123,7 +7178,8 @@
     "source": "osm",
     "osmId": 307069358,
     "openingHours": "Mo-Sa 07:00-21:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/biberach-an-der-riss/830944/rewe-markt-riedlinger-str-201/",
+    "reweId": "830944"
   },
   {
     "id": "rewe-osm-307630490",
@@ -7289,7 +7345,8 @@
     "source": "osm",
     "osmId": 333587491,
     "openingHours": "Mo-Sa 07:00-24:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/viernheim/840169/rewe-markt-walter-oehmichen-str-14-18/",
+    "reweId": "840169"
   },
   {
     "id": "rewe-osm-339932780",
@@ -7441,7 +7498,8 @@
     "source": "osm",
     "osmId": 378149599,
     "openingHours": "Mo-Sa 08:00-22:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart-hedelfingen/865795/rewe-markt-otto-hirsch-bruecken-17/",
+    "reweId": "865795"
   },
   {
     "id": "rewe-osm-380900570",
@@ -7518,7 +7576,8 @@
     "source": "osm",
     "osmId": 404515512,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgartost/840401/rewe-markt-ostendstr-75/",
+    "reweId": "840401"
   },
   {
     "id": "rewe-osm-404778641",
@@ -7530,7 +7589,8 @@
     "source": "osm",
     "osmId": 404778641,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgartweilimdorf/840400/rewe-markt-loewen-markt-5/",
+    "reweId": "840400"
   },
   {
     "id": "rewe-osm-410152748",
@@ -7554,7 +7614,8 @@
     "source": "osm",
     "osmId": 411773451,
     "openingHours": "Mo-Sa 08:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/seeheim-jugenheim/240220/rewe-markt-hauptstr-35-37/",
+    "reweId": "240220"
   },
   {
     "id": "rewe-osm-411868397",
@@ -7680,7 +7741,8 @@
     "source": "osm",
     "osmId": 471039580,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/zella-mehlis/4031020/rewe-center-industriestr-4-6/",
+    "reweId": "4031020"
   },
   {
     "id": "rewe-osm-471301683",
@@ -7756,7 +7818,8 @@
     "source": "osm",
     "osmId": 527857991,
     "openingHours": "Mo-Sa 08:00-21:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/seeheim-jugenheim/240335/rewe-markt-am-grundweg-20/",
+    "reweId": "240335"
   },
   {
     "id": "rewe-osm-536786901",
@@ -7768,7 +7831,8 @@
     "source": "osm",
     "osmId": 536786901,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ulm/840295/rewe-markt-trollinger-weg-14/",
+    "reweId": "840295"
   },
   {
     "id": "rewe-osm-559803207",
@@ -7780,7 +7844,8 @@
     "source": "osm",
     "osmId": 559803207,
     "openingHours": "Mo-Sa 08:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/radolfzell/840731/rewe-markt-boehringer-str-57/",
+    "reweId": "840731"
   },
   {
     "id": "rewe-osm-565473629",
@@ -7868,7 +7933,8 @@
     "source": "osm",
     "osmId": 598214519,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muehlacker/840233/rewe-markt-bahnhofstr-71/",
+    "reweId": "840233"
   },
   {
     "id": "rewe-osm-598214786",
@@ -7918,7 +7984,8 @@
     "source": "osm",
     "osmId": 602357880,
     "openingHours": "Mo-Sa 07:00-21:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sindelfingen/865822/rewe-markt-leonberger-str-3-5/",
+    "reweId": "865822"
   },
   {
     "id": "rewe-osm-611724399",
@@ -7981,7 +8048,8 @@
     "source": "osm",
     "osmId": 617917369,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/moerfelden-walldorf-moerfelden/240064/rewe-markt-tizianplatz-33/",
+    "reweId": "240064"
   },
   {
     "id": "rewe-osm-626131200",
@@ -8069,7 +8137,8 @@
     "source": "osm",
     "osmId": 709144341,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/michelau/700001/rewe-markt-neuenseer-str-68/",
+    "reweId": "700001"
   },
   {
     "id": "rewe-osm-718693382",
@@ -8107,7 +8176,8 @@
     "source": "osm",
     "osmId": 736921286,
     "openingHours": "Mo-Fr 07:00-19:00; Sa 07:00-18:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weihenzell/4033726/rewe-markt-ansbacher-str-4/",
+    "reweId": "4033726"
   },
   {
     "id": "rewe-osm-742380965",
@@ -8157,7 +8227,8 @@
     "source": "osm",
     "osmId": 778589021,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/werra-suhl-tal/4040470/rewe-markt-werrastr-4-5/",
+    "reweId": "4040470"
   },
   {
     "id": "rewe-osm-788629904",
@@ -8169,7 +8240,8 @@
     "source": "osm",
     "osmId": 788629904,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ulm-wiblingen/840266/rewe-markt-buchauerstr-4/",
+    "reweId": "840266"
   },
   {
     "id": "rewe-osm-789365464",
@@ -8245,7 +8317,8 @@
     "source": "osm",
     "osmId": 864891674,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/renningen/865824/rewe-markt-weil-der-staedter-str-55/",
+    "reweId": "865824"
   },
   {
     "id": "rewe-osm-897440904",
@@ -8270,7 +8343,8 @@
     "source": "osm",
     "osmId": 897517599,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/reutlingen/840278/rewe-markt-foehrstr-40/",
+    "reweId": "840278"
   },
   {
     "id": "rewe-osm-917454087",
@@ -8333,7 +8407,8 @@
     "source": "osm",
     "osmId": 979327414,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/831001/rewe-markt-hauptstaetter-str-147/",
+    "reweId": "831001"
   },
   {
     "id": "rewe-osm-1015047079",
@@ -8357,7 +8432,8 @@
     "source": "osm",
     "osmId": 1023930429,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ulm/862002/rewe-markt-roemerstr-120/",
+    "reweId": "862002"
   },
   {
     "id": "rewe-osm-1066408202",
@@ -8382,7 +8458,8 @@
     "source": "osm",
     "osmId": 1067895242,
     "openingHours": "Mo-Fr 08:00-21:30; Sa 08:00-21:30",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/reutlingenringelbach/840690/rewe-markt-ringelbachstr-17/",
+    "reweId": "840690"
   },
   {
     "id": "rewe-osm-1085536161",
@@ -8573,7 +8650,8 @@
     "source": "osm",
     "osmId": 1244527616,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/831015/rewe-markt-rotenwaldstr-140/",
+    "reweId": "831015"
   },
   {
     "id": "rewe-osm-1256483481",
@@ -8585,7 +8663,8 @@
     "source": "osm",
     "osmId": 1256483481,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/pfullendorf/862019/rewe-markt-otterswanger-str-52/",
+    "reweId": "862019"
   },
   {
     "id": "rewe-osm-1258671804",
@@ -8711,7 +8790,8 @@
     "source": "osm",
     "osmId": 1349212716,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/herrieden/1356304/rewe-markt-muenchener-str-35/",
+    "reweId": "1356304"
   },
   {
     "id": "rewe-osm-1351704496",
@@ -8761,7 +8841,8 @@
     "source": "osm",
     "osmId": 1359319610,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schmalkalden/1469536/rewe-markt-renthofstr-8/",
+    "reweId": "1469536"
   },
   {
     "id": "rewe-osm-1362132062",
@@ -8799,7 +8880,8 @@
     "source": "osm",
     "osmId": 1378093373,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/obernburgeisenbach/240160/rewe-markt-auf-der-au-19/",
+    "reweId": "240160"
   },
   {
     "id": "rewe-osm-1384205671",
@@ -8861,7 +8943,8 @@
     "source": "osm",
     "osmId": 1445050559,
     "openingHours": "Mo-Sa 07:00-23:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/831033/rewe-markt-kronenstr-7/",
+    "reweId": "831033"
   },
   {
     "id": "rewe-osm-1455257401",
@@ -8885,7 +8968,8 @@
     "source": "osm",
     "osmId": 1463701566,
     "openingHours": "Mo-Sa 06:30-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/freigericht-somborn/840837/rewe-markt-rathausstr-3/",
+    "reweId": "840837"
   },
   {
     "id": "rewe-osm-1481375420",
@@ -8935,7 +9019,8 @@
     "source": "osm",
     "osmId": 1509260922,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ulm/840117/rewe-markt-wielandstr-56/",
+    "reweId": "840117"
   },
   {
     "id": "rewe-osm-1514087178",
@@ -9012,7 +9097,8 @@
     "source": "osm",
     "osmId": 1548450678,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/winnenden/865797/rewe-markt-adlerplatz-1/",
+    "reweId": "865797"
   },
   {
     "id": "rewe-osm-1557116094",
@@ -9128,7 +9214,8 @@
     "source": "osm",
     "osmId": 1606508509,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/obertshausen/240208/rewe-markt-beethovenstr-7/",
+    "reweId": "240208"
   },
   {
     "id": "rewe-osm-1607543498",
@@ -9270,7 +9357,8 @@
     "source": "osm",
     "osmId": 1671660588,
     "openingHours": "Mo-Fr 08:00-19:00; Sa 07:30-18:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/remshalden/861109/rewe-markt-bahnhofstr-38/",
+    "reweId": "861109"
   },
   {
     "id": "rewe-osm-1672144045",
@@ -9294,7 +9382,8 @@
     "source": "osm",
     "osmId": 1674719105,
     "openingHours": "Mo-Sa 07:00-24:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/reutlingen/562508/rewe-markt-albstr-60/",
+    "reweId": "562508"
   },
   {
     "id": "rewe-osm-1681301223",
@@ -9433,7 +9522,8 @@
     "source": "osm",
     "osmId": 1807781016,
     "openingHours": "Mo-Sa 07:00-22:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neukirchen/1464150/rewe-markt-am-rathaus-4/",
+    "reweId": "1464150"
   },
   {
     "id": "rewe-osm-1866475983",
@@ -9558,7 +9648,8 @@
     "source": "osm",
     "osmId": 1977564209,
     "openingHours": "Mo-Fr 06:00-22:00, Sa 06:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/waltershausen/4040472/rewe-markt-ohrdrufer-str-34-36/",
+    "reweId": "4040472"
   },
   {
     "id": "rewe-osm-1990097570",
@@ -9570,7 +9661,8 @@
     "source": "osm",
     "osmId": 1990097570,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wetzlar-niedergirmes/1761997/rewe-markt-naunheimer-strasse-40/",
+    "reweId": "1761997"
   },
   {
     "id": "rewe-osm-2037072430",
@@ -9608,7 +9700,8 @@
     "source": "osm",
     "osmId": 2059780263,
     "openingHours": "Mo-Sa 07:00-20:00; PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/eching-am-ammersee/461736/rewe-markt-am-windachfeld-3/",
+    "reweId": "461736"
   },
   {
     "id": "rewe-osm-2074253298",
@@ -9672,7 +9765,8 @@
     "source": "osm",
     "osmId": 2147150620,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/romrod/1464148/rewe-markt-zeller-str-5-7/",
+    "reweId": "1464148"
   },
   {
     "id": "rewe-osm-2159902022",
@@ -9721,7 +9815,8 @@
     "source": "osm",
     "osmId": 2179971754,
     "openingHours": "Mo-Sa 06:30-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/aulendorf/840258/rewe-markt-poststr-22-26/",
+    "reweId": "840258"
   },
   {
     "id": "rewe-osm-2268644211",
@@ -9783,7 +9878,8 @@
     "source": "osm",
     "osmId": 2363067446,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weinheim/862016/rewe-markt-grundelbachstr-18/",
+    "reweId": "862016"
   },
   {
     "id": "rewe-osm-2406820514",
@@ -9795,7 +9891,8 @@
     "source": "osm",
     "osmId": 2406820514,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/moerfelden-walldorf-walldorf/240174/rewe-markt-farmstr-101aschaffenburger-str/",
+    "reweId": "240174"
   },
   {
     "id": "rewe-osm-2435304461",
@@ -9896,7 +9993,8 @@
     "source": "osm",
     "osmId": 2509425526,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/riedlingen/840256/rewe-markt-gammertinger-str-33/",
+    "reweId": "840256"
   },
   {
     "id": "rewe-osm-2510481397",
@@ -9985,7 +10083,8 @@
     "source": "osm",
     "osmId": 2672740856,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart-wangen/840391/rewe-markt-ulmerstr-296/",
+    "reweId": "840391"
   },
   {
     "id": "rewe-osm-2688731738",
@@ -10127,7 +10226,8 @@
     "source": "osm",
     "osmId": 2972524966,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart-ost/840883/rewe-markt-ostendstr-90/",
+    "reweId": "840883"
   },
   {
     "id": "rewe-osm-3042835638",
@@ -10214,7 +10314,8 @@
     "source": "osm",
     "osmId": 3247212261,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/offenbach-mathildenviertel/241179/rewe-markt-mathildenstrasse-15-19/",
+    "reweId": "241179"
   },
   {
     "id": "rewe-osm-3267567909",
@@ -10302,7 +10403,8 @@
     "source": "osm",
     "osmId": 3442942515,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stockach/840965/rewe-markt-stegwiesen-20/",
+    "reweId": "840965"
   },
   {
     "id": "rewe-osm-3476692593",
@@ -10519,7 +10621,8 @@
     "source": "osm",
     "osmId": 3854034141,
     "openingHours": "Mo-Sa 8:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wieslochbaiertal/861682/rewe-markt-wieslocher-str-15/",
+    "reweId": "861682"
   },
   {
     "id": "rewe-osm-3857024226",
@@ -10645,7 +10748,8 @@
     "source": "osm",
     "osmId": 4197286831,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wertheim/441097/rewe-markt-willy-brandt-str-19/",
+    "reweId": "441097"
   },
   {
     "id": "rewe-osm-4220120650",
@@ -10744,7 +10848,8 @@
     "source": "osm",
     "osmId": 4485823789,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/roedental/440666/rewe-markt-oeslauer-str-79/",
+    "reweId": "440666"
   },
   {
     "id": "rewe-osm-4486435382",
@@ -10999,7 +11104,8 @@
     "source": "osm",
     "osmId": 5044211896,
     "openingHours": "Mo-Sa 08:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/831001/rewe-markt-hauptstaetter-str-147/",
+    "reweId": "831001"
   },
   {
     "id": "rewe-osm-5079608782",
@@ -11267,7 +11373,8 @@
     "source": "osm",
     "osmId": 5814482159,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wuerzburg/461795/rewe-markt-rottendorfer-strasse-67/",
+    "reweId": "461795"
   },
   {
     "id": "rewe-osm-5917965144",
@@ -11429,7 +11536,8 @@
     "source": "osm",
     "osmId": 6363580010,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ruhla/1763532/rewe-markt-carl-gareis-str-22/",
+    "reweId": "1763532"
   },
   {
     "id": "rewe-osm-6378042422",
@@ -11504,7 +11612,8 @@
     "source": "osm",
     "osmId": 6913316585,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/830982/rewe-markt-rueckertstrasse-7/",
+    "reweId": "830982"
   },
   {
     "id": "rewe-osm-6955912313",
@@ -11528,7 +11637,8 @@
     "source": "osm",
     "osmId": 6989755828,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sonthofen/440305/rewe-markt-samuel-bachmann-str-5/",
+    "reweId": "440305"
   },
   {
     "id": "rewe-osm-7003951461",
@@ -11679,7 +11789,8 @@
     "source": "osm",
     "osmId": 7801402912,
     "openingHours": "Mo-Sa 07:00-20:00; PH,Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wuerzburg/1469285/rewe-markt-alfred-nobel-str-12/",
+    "reweId": "1469285"
   },
   {
     "id": "rewe-osm-7803252763",
@@ -11794,7 +11905,8 @@
     "source": "osm",
     "osmId": 8048422569,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/pfullingen/840540/rewe-markt-stuhlsteige-5/",
+    "reweId": "840540"
   },
   {
     "id": "rewe-osm-8214799442",
@@ -11931,7 +12043,8 @@
     "source": "osm",
     "osmId": 8905162545,
     "openingHours": "Mo-Th 07:00-22:00; Fr-Sa 07:00-24:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuttgart/1471432/rewe-markt-rotebuehlplatz-21-25/",
+    "reweId": "1471432"
   },
   {
     "id": "rewe-osm-8916949812",
@@ -11982,7 +12095,8 @@
     "source": "osm",
     "osmId": 9048077933,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/tambach-dietharz/4040506/rewe-markt-bahnhofstr-12-a/",
+    "reweId": "4040506"
   },
   {
     "id": "rewe-osm-9049718678",
@@ -12579,7 +12693,8 @@
     "source": "osm",
     "osmId": 12365291572,
     "openingHours": "Mo-Sa 7:00-21:30",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/crailsheim/6100013/rewe-markt-alter-postweg-10/",
+    "reweId": "6100013"
   },
   {
     "id": "rewe-osm-12424502789",
@@ -12655,7 +12770,8 @@
     "source": "osm",
     "osmId": 12879362704,
     "openingHours": "Mo-Sa 07:00-21:30",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wehrheim/240410/rewe-markt-bahnhofstr-3oranienstr-1/",
+    "reweId": "240410"
   },
   {
     "id": "rewe-osm-12899287068",
@@ -12808,7 +12924,8 @@
     "source": "osm",
     "osmId": 13385974675,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/isny/565125/rewe-markt-schwanenweg-12/",
+    "reweId": "565125"
   },
   {
     "id": "rewe-osm-13611205859",
@@ -12870,7 +12987,8 @@
     "source": "osm",
     "osmId": 13667115335,
     "openingHours": "Mo-Sa 07:00-22:00; ph off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/niederstotzingen/8542518/rewe-markt-place-de-bages-2/",
+    "reweId": "8542518"
   },
   {
     "id": "rewe-osm-13743149199",
@@ -12907,7 +13025,8 @@
     "source": "osm",
     "osmId": 13949071620,
     "openingHours": "Mo-Sa 07:00-22:00; Su, PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/pforzheim/8550074/rewe-markt-westliche-karl-friedrich-str-37/",
+    "reweId": "8550074"
   },
   {
     "id": "rewe-osm-13964394773",
@@ -12944,7 +13063,8 @@
     "source": "osm",
     "osmId": 199335016,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neubiberg/1469275/rewe-markt-aeussere-hauptstr-3/",
+    "reweId": "1469275"
   },
   {
     "id": "rewe-osm-206359646",
@@ -12969,7 +13089,8 @@
     "source": "osm",
     "osmId": 240363868,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/olching/440468/rewe-markt-johann-g-gutenberg-str-18/",
+    "reweId": "440468"
   },
   {
     "id": "rewe-osm-243734669",
@@ -13144,7 +13265,8 @@
     "source": "osm",
     "osmId": 281389436,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-berg-am-laim/250486/rewe-markt-josephsburgstr-37/",
+    "reweId": "250486"
   },
   {
     "id": "rewe-osm-283161401",
@@ -13168,7 +13290,8 @@
     "source": "osm",
     "osmId": 286750910,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440360/rewe-markt-alfred-arndt-str-1/",
+    "reweId": "440360"
   },
   {
     "id": "rewe-osm-298687121",
@@ -13180,7 +13303,8 @@
     "source": "osm",
     "osmId": 298687121,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muehldorf/440429/rewe-markt-adolf-kolping-str-2/",
+    "reweId": "440429"
   },
   {
     "id": "rewe-osm-299652504",
@@ -13217,7 +13341,8 @@
     "source": "osm",
     "osmId": 308481459,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-thalkirchen-obersendl/440684/rewe-markt-aidenbachstr-30/",
+    "reweId": "440684"
   },
   {
     "id": "rewe-osm-315953240",
@@ -13292,7 +13417,8 @@
     "source": "osm",
     "osmId": 332790676,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-altstadt-lehel/440547/rewe-markt-tal-13/",
+    "reweId": "440547"
   },
   {
     "id": "rewe-osm-335569307",
@@ -13406,7 +13532,8 @@
     "source": "osm",
     "osmId": 372772894,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/werdau/4040201/rewe-markt-uhlandstr-1/",
+    "reweId": "4040201"
   },
   {
     "id": "rewe-osm-387870117",
@@ -13443,7 +13570,8 @@
     "source": "osm",
     "osmId": 409497588,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440546/rewe-markt-geyerstr-44/",
+    "reweId": "440546"
   },
   {
     "id": "rewe-osm-409551622",
@@ -13455,7 +13583,8 @@
     "source": "osm",
     "osmId": 409551622,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/passau/440405/rewe-markt-spitalhofstr-94/",
+    "reweId": "440405"
   },
   {
     "id": "rewe-osm-416821860",
@@ -13492,7 +13621,8 @@
     "source": "osm",
     "osmId": 419294368,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wendelstein/431082/rewe-markt-sperbersloher-str-112/",
+    "reweId": "431082"
   },
   {
     "id": "rewe-osm-427540546",
@@ -13504,7 +13634,8 @@
     "source": "osm",
     "osmId": 427540546,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/431111/rewe-markt-schleissheimer-str-137/",
+    "reweId": "431111"
   },
   {
     "id": "rewe-osm-428094539",
@@ -13529,7 +13660,8 @@
     "source": "osm",
     "osmId": 434139503,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-obergiesing/440753/rewe-markt-tegernseer-landstr-146/",
+    "reweId": "440753"
   },
   {
     "id": "rewe-osm-435732932",
@@ -13566,7 +13698,8 @@
     "source": "osm",
     "osmId": 448950020,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/planeggmartinsried/440630/rewe-markt-roentgenstreinsteinstr-5-7/",
+    "reweId": "440630"
   },
   {
     "id": "rewe-osm-452068323",
@@ -13578,7 +13711,8 @@
     "source": "osm",
     "osmId": 452068323,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/8545564/rewe-markt-agnesstr-3/",
+    "reweId": "8545564"
   },
   {
     "id": "rewe-osm-455537321",
@@ -13665,7 +13799,8 @@
     "source": "osm",
     "osmId": 564930679,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oberhachingdeisenhofen/861357/rewe-markt-laufzorner-str-11/",
+    "reweId": "861357"
   },
   {
     "id": "rewe-osm-567834741",
@@ -13716,7 +13851,8 @@
     "source": "osm",
     "osmId": 604244830,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/zwiesel/461668/rewe-markt-regener-str-70/",
+    "reweId": "461668"
   },
   {
     "id": "rewe-osm-617283009",
@@ -13754,7 +13890,8 @@
     "source": "osm",
     "osmId": 647081922,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/8545564/rewe-markt-agnesstr-3/",
+    "reweId": "8545564"
   },
   {
     "id": "rewe-osm-672418182",
@@ -13804,7 +13941,8 @@
     "source": "osm",
     "osmId": 746423002,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/1800014/rewe-markt-nymphenburger-str-166/",
+    "reweId": "1800014"
   },
   {
     "id": "rewe-osm-757471404",
@@ -13828,7 +13966,8 @@
     "source": "osm",
     "osmId": 759759782,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/poessneck/1469533/rewe-markt-malmsgelaenge-2/",
+    "reweId": "1469533"
   },
   {
     "id": "rewe-osm-767482729",
@@ -13852,7 +13991,8 @@
     "source": "osm",
     "osmId": 793774683,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/320975/rewe-markt-kaflerstr-2/",
+    "reweId": "320975"
   },
   {
     "id": "rewe-osm-836176461",
@@ -13914,7 +14054,8 @@
     "source": "osm",
     "osmId": 907889095,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/puchheim/865865/rewe-markt-siemensstr-2e/",
+    "reweId": "865865"
   },
   {
     "id": "rewe-osm-936128388",
@@ -14054,7 +14195,8 @@
     "source": "osm",
     "osmId": 1252613266,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-obergiesing/440753/rewe-markt-tegernseer-landstr-146/",
+    "reweId": "440753"
   },
   {
     "id": "rewe-osm-1309330940",
@@ -14141,7 +14283,8 @@
     "source": "osm",
     "osmId": 1499298501,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/461749/rewe-markt-rosa-bavarese-str-1a/",
+    "reweId": "461749"
   },
   {
     "id": "rewe-osm-1510076614",
@@ -14242,7 +14385,8 @@
     "source": "osm",
     "osmId": 1657372201,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/piding/865850/rewe-markt-salzstr-1/",
+    "reweId": "865850"
   },
   {
     "id": "rewe-osm-1666683112",
@@ -14254,7 +14398,8 @@
     "source": "osm",
     "osmId": 1666683112,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weiden/1461503/rewe-markt-peuerlstr-36/",
+    "reweId": "1461503"
   },
   {
     "id": "rewe-osm-1695054722",
@@ -14266,7 +14411,8 @@
     "source": "osm",
     "osmId": 1695054722,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vaterstetten/440393/rewe-markt-bahnhofstr-36/",
+    "reweId": "440393"
   },
   {
     "id": "rewe-osm-1696204356",
@@ -14304,7 +14450,8 @@
     "source": "osm",
     "osmId": 1752428521,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/regensburg/440859/rewe-markt-von-seeckt-strasse-11/",
+    "reweId": "440859"
   },
   {
     "id": "rewe-osm-1811424971",
@@ -14316,7 +14463,8 @@
     "source": "osm",
     "osmId": 1811424971,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schoenau/440866/rewe-markt-triftplatz-5/",
+    "reweId": "440866"
   },
   {
     "id": "rewe-osm-1856946982",
@@ -14379,7 +14527,8 @@
     "source": "osm",
     "osmId": 1920628788,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/zorneding/440421/rewe-markt-georg-wimmer-ring-6/",
+    "reweId": "440421"
   },
   {
     "id": "rewe-osm-1937859309",
@@ -14481,7 +14630,8 @@
     "source": "osm",
     "osmId": 2266147247,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/regenstauf/461748/rewe-markt-regensburger-str-20/",
+    "reweId": "461748"
   },
   {
     "id": "rewe-osm-2294933268",
@@ -14493,7 +14643,8 @@
     "source": "osm",
     "osmId": 2294933268,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/radebeul/4040396/rewe-markt-sidonienstr-1/",
+    "reweId": "4040396"
   },
   {
     "id": "rewe-osm-2334304583",
@@ -14518,7 +14669,8 @@
     "source": "osm",
     "osmId": 2374031065,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vilshofen/440362/rewe-markt-passauer-str-29/",
+    "reweId": "440362"
   },
   {
     "id": "rewe-osm-2422334655",
@@ -14556,7 +14708,8 @@
     "source": "osm",
     "osmId": 2440667290,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-sendling-westpark/440752/rewe-markt-partnachplatz-1/",
+    "reweId": "440752"
   },
   {
     "id": "rewe-osm-2461355229",
@@ -14581,7 +14734,8 @@
     "source": "osm",
     "osmId": 2477819365,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/erding/431036/rewe-markt-rennweg-41/",
+    "reweId": "431036"
   },
   {
     "id": "rewe-osm-2478853116",
@@ -14606,7 +14760,8 @@
     "source": "osm",
     "osmId": 2481092481,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/431035/rewe-markt-muellerstrasse-3/",
+    "reweId": "431035"
   },
   {
     "id": "rewe-osm-2507469743",
@@ -14718,7 +14873,8 @@
     "source": "osm",
     "osmId": 2738087700,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/traunreut/461810/rewe-center-werner-von-siemens-str-2/",
+    "reweId": "461810"
   },
   {
     "id": "rewe-osm-2828753261",
@@ -14743,7 +14899,8 @@
     "source": "osm",
     "osmId": 2855735409,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/zolling/440854/rewe-markt-am-saegewerk-3/",
+    "reweId": "440854"
   },
   {
     "id": "rewe-osm-2867453066",
@@ -14755,7 +14912,8 @@
     "source": "osm",
     "osmId": 2867453066,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440553/rewe-markt-freischuetzstr-92/",
+    "reweId": "440553"
   },
   {
     "id": "rewe-osm-2886854268",
@@ -14804,7 +14962,8 @@
     "source": "osm",
     "osmId": 3110157711,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-obergiesing/440753/rewe-markt-tegernseer-landstr-146/",
+    "reweId": "440753"
   },
   {
     "id": "rewe-osm-3111508085",
@@ -14816,7 +14975,8 @@
     "source": "osm",
     "osmId": 3111508085,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/regensburg/431058/rewe-markt-dachauplatz-1/",
+    "reweId": "431058"
   },
   {
     "id": "rewe-osm-3174993254",
@@ -14904,7 +15064,8 @@
     "source": "osm",
     "osmId": 3560727907,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/roding/461867/rewe-markt-schellererstr-1/",
+    "reweId": "461867"
   },
   {
     "id": "rewe-osm-3657720434",
@@ -14929,7 +15090,8 @@
     "source": "osm",
     "osmId": 3808295129,
     "openingHours": "Mo-Sa 06:00-21:30; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oelsnitz-vogtland/4040469/rewe-markt-alte-bahnhofstr-9/",
+    "reweId": "4040469"
   },
   {
     "id": "rewe-osm-3880419175",
@@ -14941,7 +15103,8 @@
     "source": "osm",
     "osmId": 3880419175,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/461923/rewe-markt-st-veit-strasse-11/",
+    "reweId": "461923"
   },
   {
     "id": "rewe-osm-3897093880",
@@ -15053,7 +15216,8 @@
     "source": "osm",
     "osmId": 4593439238,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/320837/rewe-markt-putzbrunner-str-4/",
+    "reweId": "320837"
   },
   {
     "id": "rewe-osm-4875921105",
@@ -15090,7 +15254,8 @@
     "source": "osm",
     "osmId": 4893280813,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off; Jan 1,Jan 6 off; Dec 24 07:00-14:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440532/rewe-markt-petra-kelly-str-1/",
+    "reweId": "440532"
   },
   {
     "id": "rewe-osm-4957376462",
@@ -15153,7 +15318,8 @@
     "source": "osm",
     "osmId": 5245049636,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neustadt-an-der-orla/565438/rewe-markt-zum-festplatz-3/",
+    "reweId": "565438"
   },
   {
     "id": "rewe-osm-5255943196",
@@ -15177,7 +15343,8 @@
     "source": "osm",
     "osmId": 5300857629,
     "openingHours": "Mo-Sa 08:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen-berg-am-laim/1940296/rewe-markt-josephsburgstr-37/",
+    "reweId": "1940296"
   },
   {
     "id": "rewe-osm-5497502331",
@@ -15201,7 +15368,8 @@
     "source": "osm",
     "osmId": 5554924726,
     "openingHours": "Mo-Sa 06:00- 20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/431094/rewe-markt-walter-sedlmayr-platz-6/",
+    "reweId": "431094"
   },
   {
     "id": "rewe-osm-5720249074",
@@ -15354,7 +15522,8 @@
     "source": "osm",
     "osmId": 5992950089,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440763/rewe-markt-elisabeth-castonier-platz-25/",
+    "reweId": "440763"
   },
   {
     "id": "rewe-osm-6002482647",
@@ -15366,7 +15535,8 @@
     "source": "osm",
     "osmId": 6002482647,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/olbernhau/1931603/rewe-markt-am-gessingplatz-2/",
+    "reweId": "1931603"
   },
   {
     "id": "rewe-osm-6069956808",
@@ -15391,7 +15561,8 @@
     "source": "osm",
     "osmId": 6119608171,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/plech/461676/rewe-markt-gewerbepark-schoenthal-4/",
+    "reweId": "461676"
   },
   {
     "id": "rewe-osm-6122216705",
@@ -15428,7 +15599,8 @@
     "source": "osm",
     "osmId": 6184363989,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/roethenbach-adpegnitz/461741/rewe-markt-bahnhofstr-16/",
+    "reweId": "461741"
   },
   {
     "id": "rewe-osm-6265336797",
@@ -15440,7 +15612,8 @@
     "source": "osm",
     "osmId": 6265336797,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/562368/rewe-markt-sendlinger-strasse-46/",
+    "reweId": "562368"
   },
   {
     "id": "rewe-osm-6279175903",
@@ -15477,7 +15650,8 @@
     "source": "osm",
     "osmId": 6404031314,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/windischleuba/1763958/rewe-markt-fuenfminutenweg-nord-1/",
+    "reweId": "1763958"
   },
   {
     "id": "rewe-osm-6421333671",
@@ -15640,7 +15814,8 @@
     "source": "osm",
     "osmId": 7398962781,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/passau/440895/rewe-markt-steinbachstrasse-60/",
+    "reweId": "440895"
   },
   {
     "id": "rewe-osm-7788253200",
@@ -15664,7 +15839,8 @@
     "source": "osm",
     "osmId": 7809442714,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neunburg-vorm-wald/565682/rewe-markt-am-pfalzgrafencenter-9/",
+    "reweId": "565682"
   },
   {
     "id": "rewe-osm-7810644912",
@@ -15676,7 +15852,8 @@
     "source": "osm",
     "osmId": 7810644912,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neuhaus-am-rennweg/440943/rewe-markt-robert-koch-str-19/",
+    "reweId": "440943"
   },
   {
     "id": "rewe-osm-7899507094",
@@ -15778,7 +15955,8 @@
     "source": "osm",
     "osmId": 8197298780,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/zeulenroda-triebes/565537/rewe-markt-schopperstr-67/",
+    "reweId": "565537"
   },
   {
     "id": "rewe-osm-8297555351",
@@ -15803,7 +15981,8 @@
     "source": "osm",
     "osmId": 8298125109,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vierkirchenesterhofen/440411/rewe-markt-unterfeldring-1/",
+    "reweId": "440411"
   },
   {
     "id": "rewe-osm-8302553571",
@@ -15852,7 +16031,8 @@
     "source": "osm",
     "osmId": 8493983381,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/441069/rewe-markt-goethestr-30-34/",
+    "reweId": "441069"
   },
   {
     "id": "rewe-osm-8606879079",
@@ -15951,7 +16131,8 @@
     "source": "osm",
     "osmId": 9318841468,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schrobenhausen/440533/rewe-markt-poettmeser-str-10/",
+    "reweId": "440533"
   },
   {
     "id": "rewe-osm-9386040096",
@@ -15975,7 +16156,8 @@
     "source": "osm",
     "osmId": 9625056823,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wasserburg-am-inn/440616/rewe-markt-muenchner-str-6/",
+    "reweId": "440616"
   },
   {
     "id": "rewe-osm-9692754516",
@@ -15999,7 +16181,8 @@
     "source": "osm",
     "osmId": 9809090044,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/regensburg/4040258/rewe-markt-dr-gessler-str-2/",
+    "reweId": "4040258"
   },
   {
     "id": "rewe-osm-9826327499",
@@ -16062,7 +16245,8 @@
     "source": "osm",
     "osmId": 10221925773,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/440696/rewe-markt-carl-wery-str-35/",
+    "reweId": "440696"
   },
   {
     "id": "rewe-osm-10223700361",
@@ -16099,7 +16283,8 @@
     "source": "osm",
     "osmId": 10257885028,
     "openingHours": "Mo-Sa 07:00-20:00; PH,Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/kulmbach/1469174/rewe-markt-lichtenfelser-str-50/",
+    "reweId": "1469174"
   },
   {
     "id": "rewe-osm-10656246134",
@@ -16148,7 +16333,8 @@
     "source": "osm",
     "osmId": 11611080223,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/plauen/8400018/rewe-markt-anton-kraus-str-6/",
+    "reweId": "8400018"
   },
   {
     "id": "rewe-osm-11968450557",
@@ -16234,7 +16420,8 @@
     "source": "osm",
     "osmId": 12778074342,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weiden/1469599/rewe-markt-tachauer-str-25/",
+    "reweId": "1469599"
   },
   {
     "id": "rewe-osm-13028033359",
@@ -16258,7 +16445,8 @@
     "source": "osm",
     "osmId": 13251271007,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schliersee-neuhaus/833220/rewe-markt-duernbachstr-1a/",
+    "reweId": "833220"
   },
   {
     "id": "rewe-osm-13284899354",
@@ -16307,7 +16495,8 @@
     "source": "osm",
     "osmId": 13386830762,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/waldkraiburg/4148045/rewe-markt-bahnhofstr-2a/",
+    "reweId": "4148045"
   },
   {
     "id": "rewe-osm-13415985580",
@@ -16331,7 +16520,8 @@
     "source": "osm",
     "osmId": 13418444852,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenchen/8536954/rewe-markt-ridlerstr-37-39/",
+    "reweId": "8536954"
   },
   {
     "id": "rewe-osm-13661200062",
@@ -16536,7 +16726,8 @@
     "source": "osm",
     "osmId": 47930352,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster-centrum/1940225/rewe-markt-warendorfer-str-54/",
+    "reweId": "1940225"
   },
   {
     "id": "rewe-osm-241783051",
@@ -16650,7 +16841,8 @@
     "source": "osm",
     "osmId": 263031135,
     "openingHours": "Mo-Sa 07:00-24:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster/861978/rewe-markt-roggenmarkt-15-16/",
+    "reweId": "861978"
   },
   {
     "id": "rewe-osm-267278210",
@@ -16752,7 +16944,8 @@
     "source": "osm",
     "osmId": 283446825,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster-nord/565284/rewe-markt-catharina-mueller-str-4-8/",
+    "reweId": "565284"
   },
   {
     "id": "rewe-osm-283546976",
@@ -16790,7 +16983,8 @@
     "source": "osm",
     "osmId": 286815559,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sonsbeck/1762802/rewe-markt-hochstr-132/",
+    "reweId": "1762802"
   },
   {
     "id": "rewe-osm-288278769",
@@ -16814,7 +17008,8 @@
     "source": "osm",
     "osmId": 289664270,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/unna/250367/rewe-markt-massener-hellweg-4/",
+    "reweId": "250367"
   },
   {
     "id": "rewe-osm-290783805",
@@ -16916,7 +17111,8 @@
     "source": "osm",
     "osmId": 297916395,
     "openingHours": "Mo-Sa 07:00-21:00; Su, PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/unna/8534807/rewe-markt-ostring-11-15/",
+    "reweId": "8534807"
   },
   {
     "id": "rewe-osm-302697200",
@@ -17251,7 +17447,8 @@
     "source": "osm",
     "osmId": 387844843,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/remscheid/8321048/rewe-markt-bismarckstr-87/",
+    "reweId": "8321048"
   },
   {
     "id": "rewe-osm-390333775",
@@ -17263,7 +17460,8 @@
     "source": "osm",
     "osmId": 390333775,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/suedlohn/1940340/rewe-markt-pfarrer-becker-str-5/",
+    "reweId": "1940340"
   },
   {
     "id": "rewe-osm-414896589",
@@ -17402,7 +17600,8 @@
     "source": "osm",
     "osmId": 506339847,
     "openingHours": "Mo-Sa 07:00-21:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/hamm/240542/rewe-markt-ahlener-str-132/",
+    "reweId": "240542"
   },
   {
     "id": "rewe-osm-510924539",
@@ -17427,7 +17626,8 @@
     "source": "osm",
     "osmId": 511092034,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wesel/320548/rewe-markt-kurt-kraecker-str-61/",
+    "reweId": "320548"
   },
   {
     "id": "rewe-osm-526028454",
@@ -17490,7 +17690,8 @@
     "source": "osm",
     "osmId": 587974065,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/werther/562001/rewe-markt-engerstrasse-65/",
+    "reweId": "562001"
   },
   {
     "id": "rewe-osm-598602801",
@@ -17552,7 +17753,8 @@
     "source": "osm",
     "osmId": 626641095,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vechta/540170/rewe-markt-falkenweg-6/",
+    "reweId": "540170"
   },
   {
     "id": "rewe-osm-628582445",
@@ -17742,7 +17944,8 @@
     "source": "osm",
     "osmId": 754166213,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/olsberg/1465603/rewe-markt-ruhrufer-20/",
+    "reweId": "1465603"
   },
   {
     "id": "rewe-osm-766699770",
@@ -17754,7 +17957,8 @@
     "source": "osm",
     "osmId": 766699770,
     "openingHours": "Mo-Sa 08:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oberhausen/25801/rewe-markt-dudeler-str-11/",
+    "reweId": "25801"
   },
   {
     "id": "rewe-osm-821790238",
@@ -17805,7 +18009,8 @@
     "source": "osm",
     "osmId": 931732143,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/bad-iburg/833216/rewe-markt-muehlentor-1/",
+    "reweId": "833216"
   },
   {
     "id": "rewe-osm-946529497",
@@ -17830,7 +18035,8 @@
     "source": "osm",
     "osmId": 966202454,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/osnabrueck/562005/rewe-markt-bohmter-strasse-6464-c/",
+    "reweId": "562005"
   },
   {
     "id": "rewe-osm-973861532",
@@ -17880,7 +18086,8 @@
     "source": "osm",
     "osmId": 1108925540,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/unna/8534807/rewe-markt-ostring-11-15/",
+    "reweId": "8534807"
   },
   {
     "id": "rewe-osm-1124883746",
@@ -18250,7 +18457,8 @@
     "source": "osm",
     "osmId": 1639514563,
     "openingHours": "Mo-Fr 07:00-24:00; Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster/5800015/rewe-markt-warendorfer-str-189/",
+    "reweId": "5800015"
   },
   {
     "id": "rewe-osm-1682321028",
@@ -18287,7 +18495,8 @@
     "source": "osm",
     "osmId": 1730635822,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/radevormwald/1940275/rewe-markt-poststr-1/",
+    "reweId": "1940275"
   },
   {
     "id": "rewe-osm-1770033002",
@@ -18337,7 +18546,8 @@
     "source": "osm",
     "osmId": 1840515917,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/dortmund/840345/rewe-markt-schwerter-str-299/",
+    "reweId": "840345"
   },
   {
     "id": "rewe-osm-1934209360",
@@ -18449,7 +18659,8 @@
     "source": "osm",
     "osmId": 2131150007,
     "openingHours": "Mo-Sa 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muelheim-an-der-ruhr/260008/rewe-markt-aktienstr-322/",
+    "reweId": "260008"
   },
   {
     "id": "rewe-osm-2161466731",
@@ -18487,7 +18698,8 @@
     "source": "osm",
     "osmId": 2334767017,
     "openingHours": "Mo-Sa 08:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oldenburg/562020/rewe-markt-schlossplatz-3/",
+    "reweId": "562020"
   },
   {
     "id": "rewe-osm-2358572563",
@@ -18719,7 +18931,8 @@
     "source": "osm",
     "osmId": 3039540304,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wuppertal/250368/rewe-markt-klingelholl-110/",
+    "reweId": "250368"
   },
   {
     "id": "rewe-osm-3063366713",
@@ -18731,7 +18944,8 @@
     "source": "osm",
     "osmId": 3063366713,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wuppertal-cronenberg/320189/rewe-markt-unterkirchen-22/",
+    "reweId": "320189"
   },
   {
     "id": "rewe-osm-3199527767",
@@ -18755,7 +18969,8 @@
     "source": "osm",
     "osmId": 3206710459,
     "openingHours": "Mo-Sa 06:30-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/essen/25811/rewe-markt-bredeneyer-str-4a/",
+    "reweId": "25811"
   },
   {
     "id": "rewe-osm-3221818881",
@@ -18818,7 +19033,8 @@
     "source": "osm",
     "osmId": 3397409759,
     "openingHours": "Mo-Fr 07:00-24:00; Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wuppertal-heckinghausen/840413/rewe-markt-widukindstr-34/",
+    "reweId": "840413"
   },
   {
     "id": "rewe-osm-3583937163",
@@ -18882,7 +19098,8 @@
     "source": "osm",
     "osmId": 3733491223,
     "openingHours": "Mo-Fr 07:00-24:00; Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/remscheid/25833/rewe-markt-kronprinzenstr-1/",
+    "reweId": "25833"
   },
   {
     "id": "rewe-osm-3757650126",
@@ -18970,7 +19187,8 @@
     "source": "osm",
     "osmId": 4134018505,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/werne/1701704/rewe-markt-kloecknerstr-1/",
+    "reweId": "1701704"
   },
   {
     "id": "rewe-osm-4239732131",
@@ -18994,7 +19212,8 @@
     "source": "osm",
     "osmId": 4296677491,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/radevormwald/250364/rewe-markt-nelkenstr-17-19/",
+    "reweId": "250364"
   },
   {
     "id": "rewe-osm-4303021814",
@@ -19121,7 +19340,8 @@
     "source": "osm",
     "osmId": 4674795692,
     "openingHours": "Mo-Fr 07:00-24:00; Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster/840415/rewe-markt-roggenmarkt-15-16/",
+    "reweId": "840415"
   },
   {
     "id": "rewe-osm-4709461586",
@@ -19234,7 +19454,8 @@
     "source": "osm",
     "osmId": 4910563432,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/plettenberg/541770/rewe-markt-ziegelstr-7/",
+    "reweId": "541770"
   },
   {
     "id": "rewe-osm-4915510529",
@@ -19425,7 +19646,8 @@
     "source": "osm",
     "osmId": 5730567322,
     "openingHours": "Mo-Sa 07:30-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rhede/320199/rewe-markt-rathausplatz-6/",
+    "reweId": "320199"
   },
   {
     "id": "rewe-osm-5812602371",
@@ -19462,7 +19684,8 @@
     "source": "osm",
     "osmId": 6127884985,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vechta/541752/rewe-markt-oythe-3/",
+    "reweId": "541752"
   },
   {
     "id": "rewe-osm-6170452893",
@@ -19498,7 +19721,8 @@
     "source": "osm",
     "osmId": 6505785173,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rastede/531417/rewe-markt-raiffeisenstr-52/",
+    "reweId": "531417"
   },
   {
     "id": "rewe-osm-6872128120",
@@ -19626,7 +19850,8 @@
     "source": "osm",
     "osmId": 8041157969,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/osnabrueck/541805/rewe-markt-quebecallee-6/",
+    "reweId": "541805"
   },
   {
     "id": "rewe-osm-8167326141",
@@ -19638,7 +19863,8 @@
     "source": "osm",
     "osmId": 8167326141,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/remscheid/562335/rewe-markt-am-schuetzenplatz-10/",
+    "reweId": "562335"
   },
   {
     "id": "rewe-osm-8334555956",
@@ -19715,7 +19941,8 @@
     "source": "osm",
     "osmId": 9257654643,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/niederkruechten/1478681/rewe-markt-hochstr-75/",
+    "reweId": "1478681"
   },
   {
     "id": "rewe-osm-9485048995",
@@ -19765,7 +19992,8 @@
     "source": "osm",
     "osmId": 9661051499,
     "openingHours": "Mo-Sa 07:00-24:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster/840888/rewe-markt-von-steuben-strasse-13/",
+    "reweId": "840888"
   },
   {
     "id": "rewe-osm-9688674017",
@@ -19827,7 +20055,8 @@
     "source": "osm",
     "osmId": 9995559360,
     "openingHours": "Mo-Sa 06:00-24:00; Su 08:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muenster/562383/rewe-markt-von-steuben-strasse-13/",
+    "reweId": "562383"
   },
   {
     "id": "rewe-osm-10066801492",
@@ -19852,7 +20081,8 @@
     "source": "osm",
     "osmId": 10221142335,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oldenburg/5400005/rewe-center-alter-postweg-125/",
+    "reweId": "5400005"
   },
   {
     "id": "rewe-osm-10311724451",
@@ -20004,7 +20234,8 @@
     "source": "osm",
     "osmId": 11898365638,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ratingen/5/rewe-markt-europaring-3/",
+    "reweId": "5"
   },
   {
     "id": "rewe-osm-11943018935",
@@ -20067,7 +20298,8 @@
     "source": "osm",
     "osmId": 12696841956,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/werl/533737/rewe-markt-an-der-bundesbahn-7/",
+    "reweId": "533737"
   },
   {
     "id": "rewe-osm-12843194928",
@@ -20092,7 +20324,8 @@
     "source": "osm",
     "osmId": 13353033378,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/kaarst/541769/rewe-markt-neusser-str-6-10/",
+    "reweId": "541769"
   },
   {
     "id": "rewe-osm-13858158753",
@@ -20195,7 +20428,8 @@
     "source": "osm",
     "osmId": 60242932,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/pattensen/562037/rewe-center-johann-koch-str-2/",
+    "reweId": "562037"
   },
   {
     "id": "rewe-osm-80239016",
@@ -20259,7 +20493,8 @@
     "source": "osm",
     "osmId": 129953634,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/salzgitterfredenberg/540211/rewe-markt-huettenring-50/",
+    "reweId": "540211"
   },
   {
     "id": "rewe-osm-139811272",
@@ -20284,7 +20519,8 @@
     "source": "osm",
     "osmId": 146559960,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/paderborn/1465610/rewe-markt-warburger-str-52/",
+    "reweId": "1465610"
   },
   {
     "id": "rewe-osm-156774142",
@@ -20636,7 +20872,8 @@
     "source": "osm",
     "osmId": 268489457,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wolfsburgfallersleben/540964/rewe-markt-g-f-haendel-str-10-11/",
+    "reweId": "540964"
   },
   {
     "id": "rewe-osm-269911497",
@@ -20674,7 +20911,8 @@
     "source": "osm",
     "osmId": 271856057,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/bad-salzuflen/565761/rewe-markt-ostertorosterstrasse-52-54/",
+    "reweId": "565761"
   },
   {
     "id": "rewe-osm-275651819",
@@ -20686,7 +20924,8 @@
     "source": "osm",
     "osmId": 275651819,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/tostedt/540932/rewe-markt-alte-kleinbahn-1/",
+    "reweId": "540932"
   },
   {
     "id": "rewe-osm-277052648",
@@ -20698,7 +20937,8 @@
     "source": "osm",
     "osmId": 277052648,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/reinhardshagen/1465295/rewe-markt-vaaker-weg-6/",
+    "reweId": "1465295"
   },
   {
     "id": "rewe-osm-280567427",
@@ -21026,7 +21266,8 @@
     "source": "osm",
     "osmId": 310935545,
     "openingHours": "Mo-Sa 07:00-23:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/hamburg-neustadt/1469463/rewe-markt-brauerknechtgraben-47/",
+    "reweId": "1469463"
   },
   {
     "id": "rewe-osm-312715645",
@@ -21141,7 +21382,8 @@
     "source": "osm",
     "osmId": 338775447,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/springe-eldagsen/565723/rewe-markt-am-pfingstanger-13/",
+    "reweId": "565723"
   },
   {
     "id": "rewe-osm-338815340",
@@ -21153,7 +21395,8 @@
     "source": "osm",
     "osmId": 338815340,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/salzgitter-bad/561974/rewe-markt-am-pfingstanger-19/",
+    "reweId": "561974"
   },
   {
     "id": "rewe-osm-341047552",
@@ -21214,7 +21457,8 @@
     "source": "osm",
     "osmId": 352825869,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schleswig/1461440/rewe-markt-hans-juergen-klinker-str-2/",
+    "reweId": "1461440"
   },
   {
     "id": "rewe-osm-357413196",
@@ -21239,7 +21483,8 @@
     "source": "osm",
     "osmId": 363297566,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stadthagen/540188/rewe-markt-jahnstr-35/",
+    "reweId": "540188"
   },
   {
     "id": "rewe-osm-370260808",
@@ -21366,7 +21611,8 @@
     "source": "osm",
     "osmId": 411028611,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/winterberg/9067616/rewe-markt-poststr-6/",
+    "reweId": "9067616"
   },
   {
     "id": "rewe-osm-414610842",
@@ -21391,7 +21637,8 @@
     "source": "osm",
     "osmId": 418606658,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/seesen/1465558/rewe-markt-zimmerstr-2/",
+    "reweId": "1465558"
   },
   {
     "id": "rewe-osm-425860964",
@@ -21453,7 +21700,8 @@
     "source": "osm",
     "osmId": 434553603,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ottersberg/241092/rewe-markt-gruene-str-16/",
+    "reweId": "241092"
   },
   {
     "id": "rewe-osm-442096347",
@@ -21515,7 +21763,8 @@
     "source": "osm",
     "osmId": 455474645,
     "openingHours": "Mo-Sa 07:00-22:00; Mar-Oct Su 11:00-17:00; PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/st-peter-ording/561184/rewe-markt-nordergeest-2/",
+    "reweId": "561184"
   },
   {
     "id": "rewe-osm-475294638",
@@ -21553,7 +21802,8 @@
     "source": "osm",
     "osmId": 498478415,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stade/241125/rewe-markt-altlaender-str-13-15/",
+    "reweId": "241125"
   },
   {
     "id": "rewe-osm-499461880",
@@ -21565,7 +21815,8 @@
     "source": "osm",
     "osmId": 499461880,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/salzkotten/1464004/rewe-markt-geseker-strasse-12-salinenhof/",
+    "reweId": "1464004"
   },
   {
     "id": "rewe-osm-503035765",
@@ -21713,7 +21964,8 @@
     "source": "osm",
     "osmId": 602092263,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sarstedt/540172/rewe-markt-vossstr-11-13/",
+    "reweId": "540172"
   },
   {
     "id": "rewe-osm-649222246",
@@ -21725,7 +21977,8 @@
     "source": "osm",
     "osmId": 649222246,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/tostedt/250203/rewe-markt-zinnhuette-11-13/",
+    "reweId": "250203"
   },
   {
     "id": "rewe-osm-659955308",
@@ -21763,7 +22016,8 @@
     "source": "osm",
     "osmId": 671436778,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stockelsdorf/561230/rewe-markt-rathausmarkt-3-a/",
+    "reweId": "561230"
   },
   {
     "id": "rewe-osm-690135510",
@@ -21838,7 +22092,8 @@
     "source": "osm",
     "osmId": 792497582,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/muehlhausen/1469526/rewe-markt-wanfrieder-str-104/",
+    "reweId": "1469526"
   },
   {
     "id": "rewe-osm-835631908",
@@ -21889,7 +22144,8 @@
     "source": "osm",
     "osmId": 917948307,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/thale/565429/rewe-markt-otto-schoenermark-str-2/",
+    "reweId": "565429"
   },
   {
     "id": "rewe-osm-928371750",
@@ -22169,7 +22425,8 @@
     "source": "osm",
     "osmId": 1391575114,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/paderbornsennelager/1465543/rewe-markt-danziger-str-2/",
+    "reweId": "1465543"
   },
   {
     "id": "rewe-osm-1394450125",
@@ -22269,7 +22526,8 @@
     "source": "osm",
     "osmId": 1538616842,
     "openingHours": "Mo-Sa 07:00-21:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ratekau/562028/rewe-markt-rosenstr-1/",
+    "reweId": "562028"
   },
   {
     "id": "rewe-osm-1539751231",
@@ -22396,7 +22654,8 @@
     "source": "osm",
     "osmId": 1770398982,
     "openingHours": "Mo-Sa 07:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/vlotho/565739/rewe-markt-meyra-strasse-1/",
+    "reweId": "565739"
   },
   {
     "id": "rewe-osm-1772539063",
@@ -22472,7 +22731,8 @@
     "source": "osm",
     "osmId": 1843650871,
     "openingHours": "Mo-Sa 08:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wolfsburg/241134/rewe-markt-porschestr-45/",
+    "reweId": "241134"
   },
   {
     "id": "rewe-osm-1853490966",
@@ -22484,7 +22744,8 @@
     "source": "osm",
     "osmId": 1853490966,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stuhr-brinkum/565762/rewe-markt-syker-strasse-42/",
+    "reweId": "565762"
   },
   {
     "id": "rewe-osm-1879441105",
@@ -22522,7 +22783,8 @@
     "source": "osm",
     "osmId": 1900821196,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/pattensen/562037/rewe-center-johann-koch-str-2/",
+    "reweId": "562037"
   },
   {
     "id": "rewe-osm-1923348740",
@@ -22534,7 +22796,8 @@
     "source": "osm",
     "osmId": 1923348740,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/hannover-misburg/540311/rewe-markt-hannoversche-str-92/",
+    "reweId": "540311"
   },
   {
     "id": "rewe-osm-1931493945",
@@ -22572,7 +22835,8 @@
     "source": "osm",
     "osmId": 2006372168,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sehnde/241123/rewe-markt-peiner-str-37-c/",
+    "reweId": "241123"
   },
   {
     "id": "rewe-osm-2021930931",
@@ -22711,7 +22975,8 @@
     "source": "osm",
     "osmId": 2169853157,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/lehrte/540290/rewe-markt-suedring-10/",
+    "reweId": "540290"
   },
   {
     "id": "rewe-osm-2172366285",
@@ -22877,7 +23142,8 @@
     "source": "osm",
     "osmId": 2586610134,
     "openingHours": "Mo-Sa 7:00-21:30",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/paderborn/241115/rewe-markt-kloecknerstr-38-44/",
+    "reweId": "241115"
   },
   {
     "id": "rewe-osm-2591560643",
@@ -23156,7 +23422,8 @@
     "source": "osm",
     "osmId": 3501644367,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/norderstedt/531127/rewe-markt-am-tarpenufer-3-5/",
+    "reweId": "531127"
   },
   {
     "id": "rewe-osm-3521836195",
@@ -23232,7 +23499,8 @@
     "source": "osm",
     "osmId": 3724682498,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/nordhausen/4040433/rewe-markt-pferdemarkt-1/",
+    "reweId": "4040433"
   },
   {
     "id": "rewe-osm-3726256965",
@@ -23270,7 +23538,8 @@
     "source": "osm",
     "osmId": 3775699261,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/warburg/561983/rewe-markt-paderborner-tor-165/",
+    "reweId": "561983"
   },
   {
     "id": "rewe-osm-3781263624",
@@ -23382,7 +23651,8 @@
     "source": "osm",
     "osmId": 4239979506,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/verden/250219/rewe-markt-im-ohrt-9/",
+    "reweId": "250219"
   },
   {
     "id": "rewe-osm-4338567964",
@@ -23394,7 +23664,8 @@
     "source": "osm",
     "osmId": 4338567964,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/norderstedt/531127/rewe-markt-am-tarpenufer-3-5/",
+    "reweId": "531127"
   },
   {
     "id": "rewe-osm-4380248695",
@@ -23520,7 +23791,8 @@
     "source": "osm",
     "osmId": 4791843916,
     "openingHours": "Mo-Sa 08:00-21:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/kassel-niederzwehren/240291/rewe-center-frankfurter-strasse-225/",
+    "reweId": "240291"
   },
   {
     "id": "rewe-osm-4916187136",
@@ -23532,7 +23804,8 @@
     "source": "osm",
     "osmId": 4916187136,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/ritterhude/410563/rewe-markt-riesstrasse-78/",
+    "reweId": "410563"
   },
   {
     "id": "rewe-osm-4986114575",
@@ -23544,7 +23817,8 @@
     "source": "osm",
     "osmId": 4986114575,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wurster-nordseekueste/830855/rewe-markt-feuerweg-6-a/",
+    "reweId": "830855"
   },
   {
     "id": "rewe-osm-5015166575",
@@ -23696,7 +23970,8 @@
     "source": "osm",
     "osmId": 5602736707,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sittensen/241124/rewe-markt-stader-str-28/",
+    "reweId": "241124"
   },
   {
     "id": "rewe-osm-5692546624",
@@ -23772,7 +24047,8 @@
     "source": "osm",
     "osmId": 6180336063,
     "openingHours": "Mo-Sa 07:00-20:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stade/541747/rewe-markt-steile-str-1/",
+    "reweId": "541747"
   },
   {
     "id": "rewe-osm-6186166473",
@@ -23797,7 +24073,8 @@
     "source": "osm",
     "osmId": 6277439143,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/norderstedt/531398/rewe-markt-rathausallee-31-a/",
+    "reweId": "531398"
   },
   {
     "id": "rewe-osm-6294115575",
@@ -23936,7 +24213,8 @@
     "source": "osm",
     "osmId": 7363060361,
     "openingHours": "Mo-Sa 06:00-22:00; Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/hessisch-oldendorf/541757/rewe-markt-segelhorster-strasse-2/",
+    "reweId": "541757"
   },
   {
     "id": "rewe-osm-7369906334",
@@ -24063,7 +24341,8 @@
     "source": "osm",
     "osmId": 9253844913,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/oyten/241093/rewe-markt-hauptstr-74/",
+    "reweId": "241093"
   },
   {
     "id": "rewe-osm-9652119180",
@@ -24075,7 +24354,8 @@
     "source": "osm",
     "osmId": 9652119180,
     "openingHours": "Mo-Sa 07:00-22:00; Apr-Oct Su 11:00-17:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/neustadtholstein/7600042/rewe-markt-sierksdorfer-str-8/",
+    "reweId": "7600042"
   },
   {
     "id": "rewe-osm-9917861821",
@@ -24151,7 +24431,8 @@
     "source": "osm",
     "osmId": 10695094888,
     "openingHours": "Mo-Sa 07:00-22:00; PH,Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schleswig/8542519/rewe-markt-gallberg-20/",
+    "reweId": "8542519"
   },
   {
     "id": "rewe-osm-10701439685",
@@ -24278,7 +24559,8 @@
     "source": "osm",
     "osmId": 11989015496,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/soltau/8541526/rewe-markt-am-westerfeld-7/",
+    "reweId": "8541526"
   },
   {
     "id": "rewe-osm-11994859169",
@@ -24316,7 +24598,8 @@
     "source": "osm",
     "osmId": 12369128513,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwentinentalraisdorf/210140/rewe-markt-roenner-weg-2-a/",
+    "reweId": "210140"
   },
   {
     "id": "rewe-osm-12385429756",
@@ -24493,7 +24776,8 @@
     "source": "osm",
     "osmId": 82637005,
     "openingHours": "Mo-Fr 07:00-22:00; Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/weissenfels/1469619/rewe-markt-beuditz-passage-6/",
+    "reweId": "1469619"
   },
   {
     "id": "rewe-osm-202909936",
@@ -24542,7 +24826,8 @@
     "source": "osm",
     "osmId": 253073176,
     "openingHours": "Mo-Fr 07:00-23:00; Sa 07:00-22:00; PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock/540482/rewe-markt-guestrower-str-6/",
+    "reweId": "540482"
   },
   {
     "id": "rewe-osm-261743904",
@@ -24703,7 +24988,8 @@
     "source": "osm",
     "osmId": 303927781,
     "openingHours": "Mo-Sa 06:00-22:00; Su 12:00-18:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/sassnitz/565041/rewe-markt-ruegen-galerie-16/",
+    "reweId": "565041"
   },
   {
     "id": "rewe-osm-304367382",
@@ -24814,7 +25100,8 @@
     "source": "osm",
     "osmId": 334344400,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock-suedstadt/4040754/rewe-markt-nobelstr-50-51/",
+    "reweId": "4040754"
   },
   {
     "id": "rewe-osm-338294639",
@@ -24926,7 +25213,8 @@
     "source": "osm",
     "osmId": 364084795,
     "openingHours": "Mo-Sa 07:00-22:00;PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwerin/540488/rewe-markt-guestrower-str-34/",
+    "reweId": "540488"
   },
   {
     "id": "rewe-osm-373861896",
@@ -24962,7 +25250,8 @@
     "source": "osm",
     "osmId": 378033494,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wismar/440926/rewe-markt-philipp-mueller-str-44/",
+    "reweId": "440926"
   },
   {
     "id": "rewe-osm-390502682",
@@ -25011,7 +25300,8 @@
     "source": "osm",
     "osmId": 403777083,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwerin/461937/rewe-markt-am-gruenen-tal-21/",
+    "reweId": "461937"
   },
   {
     "id": "rewe-osm-412196333",
@@ -25048,7 +25338,8 @@
     "source": "osm",
     "osmId": 414075958,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwerin-altstadt/1465537/rewe-markt-mecklenburgstr-42/",
+    "reweId": "1465537"
   },
   {
     "id": "rewe-osm-417987849",
@@ -25261,7 +25552,8 @@
     "source": "osm",
     "osmId": 649348007,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rathenow/1200004/rewe-markt-fehrbelliner-str-49/",
+    "reweId": "1200004"
   },
   {
     "id": "rewe-osm-653474129",
@@ -25360,7 +25652,8 @@
     "source": "osm",
     "osmId": 766160658,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stralsund-knieper/4040096/rewe-markt-h-heine-ring-120c/",
+    "reweId": "4040096"
   },
   {
     "id": "rewe-osm-766602125",
@@ -25686,7 +25979,8 @@
     "source": "osm",
     "osmId": 1321388107,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwerin-altstadt/1465537/rewe-markt-mecklenburgstr-42/",
+    "reweId": "1465537"
   },
   {
     "id": "rewe-osm-1336738281",
@@ -25724,7 +26018,8 @@
     "source": "osm",
     "osmId": 1422956987,
     "openingHours": "Mo-Sa 07:00-22:00;PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/stavenhagen/540460/rewe-markt-werdohler-str-3/",
+    "reweId": "540460"
   },
   {
     "id": "rewe-osm-1468082518",
@@ -25913,7 +26208,8 @@
     "source": "osm",
     "osmId": 1869640508,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/berlin-neu-hohenschoenhausen/565270/rewe-markt-ernst-barlach-str-19/",
+    "reweId": "565270"
   },
   {
     "id": "rewe-osm-1991451203",
@@ -25988,7 +26284,8 @@
     "source": "osm",
     "osmId": 2167174369,
     "openingHours": "Mo-Fr 06:00-23:30; Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock-kroepeliner-tor/1761238/rewe-markt-friedhofsweg-2/",
+    "reweId": "1761238"
   },
   {
     "id": "rewe-osm-2238828808",
@@ -26148,7 +26445,8 @@
     "source": "osm",
     "osmId": 2590661705,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/teterow/4040431/rewe-markt-fischersteig-21/",
+    "reweId": "4040431"
   },
   {
     "id": "rewe-osm-2609344871",
@@ -26185,7 +26483,8 @@
     "source": "osm",
     "osmId": 2872542913,
     "openingHours": "Mo-Sa 06:00-22:00; Dec 24 07:00-13:00; PH,Su off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/potsdam/540474/rewe-markt-nedlitzer-str-19c/",
+    "reweId": "540474"
   },
   {
     "id": "rewe-osm-2922051522",
@@ -26363,7 +26662,8 @@
     "source": "osm",
     "osmId": 4154059134,
     "openingHours": "Mo-Sa 07:00-22:00; Su 12:00-18:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock-warnemuende/4040756/rewe-markt-an-der-stadtautobahn-6263/",
+    "reweId": "4040756"
   },
   {
     "id": "rewe-osm-4355268615",
@@ -26451,7 +26751,8 @@
     "source": "osm",
     "osmId": 4916892248,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/brandenburg-an-der-havel/840166/rewe-markt-neuendorfer-str-76/",
+    "reweId": "840166"
   },
   {
     "id": "rewe-osm-5025106860",
@@ -26514,7 +26815,8 @@
     "source": "osm",
     "osmId": 5262080209,
     "openingHours": "Mo-Sa 06:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/potsdam/4040088/rewe-markt-johannes-kepler-platz-5/",
+    "reweId": "4040088"
   },
   {
     "id": "rewe-osm-5310387719",
@@ -26526,7 +26828,8 @@
     "source": "osm",
     "osmId": 5310387719,
     "openingHours": "Mo-Sa 07:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/potsdam/1931396/rewe-markt-anni-von-gottberg-str-8/",
+    "reweId": "1931396"
   },
   {
     "id": "rewe-osm-5429453839",
@@ -26551,7 +26854,8 @@
     "source": "osm",
     "osmId": 5678211759,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock/540457/rewe-markt-goerdeler-str-50/",
+    "reweId": "540457"
   },
   {
     "id": "rewe-osm-5744533104",
@@ -26676,7 +26980,8 @@
     "source": "osm",
     "osmId": 7387561870,
     "openingHours": "Mo-Sa 07:00-22:00; PH closed",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/rostock/440947/rewe-markt-salvador-allende-str-46/",
+    "reweId": "440947"
   },
   {
     "id": "rewe-osm-7743861598",
@@ -26839,7 +27144,8 @@
     "source": "osm",
     "osmId": 9428156001,
     "openingHours": "Mo-Sa 06:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/wittenberge/1766186/rewe-markt-bahnstr-1/",
+    "reweId": "1766186"
   },
   {
     "id": "rewe-osm-9681024954",
@@ -27028,7 +27334,8 @@
     "source": "osm",
     "osmId": 11608895927,
     "openingHours": "Mo-Sa 06:00-22:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/hohen-neuendorf-ot-bergfelde/1765177/rewe-markt-mittelstr-4a/",
+    "reweId": "1765177"
   },
   {
     "id": "rewe-osm-12299947274",
@@ -27066,7 +27373,8 @@
     "source": "osm",
     "osmId": 12688535452,
     "openingHours": "Mo-Sa 06:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/trebbin/8549519/rewe-markt-am-muehlengraben-4a/",
+    "reweId": "8549519"
   },
   {
     "id": "rewe-osm-13083658665",
@@ -27129,7 +27437,8 @@
     "source": "osm",
     "osmId": 13625457501,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/jessen-elster/8545026/rewe-markt-rehainer-str-13a/",
+    "reweId": "8545026"
   },
   {
     "id": "rewe-osm-13856901226",
@@ -27293,7 +27602,8 @@
     "source": "osm",
     "osmId": 2250493983,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/schwarzheide/4040290/rewe-markt-schipkauer-str-13/",
+    "reweId": "4040290"
   },
   {
     "id": "rewe-osm-2378834746",
@@ -27370,7 +27680,8 @@
     "source": "osm",
     "osmId": 12035821314,
     "openingHours": null,
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/senftenberg/4040136/rewe-markt-bahnhofstr-40/",
+    "reweId": "4040136"
   },
   {
     "id": "rewe-fuerth-1",
