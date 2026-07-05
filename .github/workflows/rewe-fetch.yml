@@ -57,6 +57,8 @@ jobs:
           fc-list | grep -iE 'noto|freefont|unifont|ipa|wqy|loma' | head -8
 
       - name: Run REWE fetcher
+        id: fetch
+        continue-on-error: true
         env:
           # Silence the warning if any optional Windows fonts are missing
           # (full Windows fonts require copying from a real Windows machine,
