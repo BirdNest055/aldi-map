@@ -43621,5 +43621,415 @@
     "longitude": 6.13573,
     "marketType": "REWE Center",
     "offersUrl": "https://www.rewe.de/angebote/uebach-palenberg/1352767/rewe-center-boschstrasse-4/"
+  },
+  {
+    "wwIdent": "840181",
+    "name": "REWE Markt",
+    "street": "Gewerbestr. 1",
+    "city": "Steinen/Höllstein",
+    "latitude": 47.64081,
+    "longitude": 7.74601,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/steinenhoellstein/840181/rewe-markt-gewerbestr-1/"
+  },
+  {
+    "wwIdent": "1765712",
+    "name": "REWE Markt",
+    "street": "Altenberger-Dom-Str. 42",
+    "city": "Odenthal",
+    "latitude": 51.03367,
+    "longitude": 7.11816,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/odenthal/1765712/rewe-markt-altenberger-dom-str-42/"
+  },
+  {
+    "wwIdent": "1765227",
+    "name": "REWE Markt",
+    "street": "Rue Quimperli 16",
+    "city": "Geilenkirchen",
+    "latitude": 50.97118,
+    "longitude": 6.11294,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/geilenkirchen/1765227/rewe-markt-rue-quimperli-16/"
+  },
+  {
+    "wwIdent": "1940231",
+    "name": "REWE Markt",
+    "street": "Hauptstr. 118",
+    "city": "Baesweiler / Setterich",
+    "latitude": 50.92375,
+    "longitude": 6.20812,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/baesweiler-setterich/1940231/rewe-markt-hauptstr-118/"
+  },
+  {
+    "wwIdent": "840882",
+    "name": "REWE Marc Adams ",
+    "street": "Hochwaldstr. 31",
+    "city": "Nonnweiler / Otzenhausen",
+    "latitude": 49.6026,
+    "longitude": 6.9889,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/nonnweiler-otzenhausen/840882/rewe-markt-hochwaldstr-31/"
+  },
+  {
+    "wwIdent": "840780",
+    "name": "REWE TEUCKE ",
+    "street": "Parkstr. 8",
+    "city": "Beckingen",
+    "latitude": 49.39307,
+    "longitude": 6.7002,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/beckingen/840780/rewe-markt-parkstr-8/"
+  },
+  {
+    "wwIdent": "831300",
+    "name": "REWE Stephanie Schneider",
+    "street": "Alte Bundesstr. 68-70",
+    "city": "Gundelfingen",
+    "latitude": 48.04273,
+    "longitude": 7.86807,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/gundelfingen/831300/rewe-markt-alte-bundesstr-68-70/"
+  },
+  {
+    "wwIdent": "240802",
+    "name": "REWE Center",
+    "street": "Kleiststraße 2",
+    "city": "Taunusstein / Hahn",
+    "latitude": 50.13933,
+    "longitude": 8.15387,
+    "marketType": "REWE Center",
+    "offersUrl": "https://www.rewe.de/angebote/taunusstein-hahn/240802/rewe-center-kleiststrasse-2/"
+  },
+  {
+    "wwIdent": "2500021",
+    "name": "REWE PETZ",
+    "street": "Dammweg 10",
+    "city": "Altenkirchen",
+    "latitude": 50.68943,
+    "longitude": 7.64644,
+    "marketType": "PETZ REWE",
+    "offersUrl": "https://www.rewe.de/angebote/altenkirchen/2500021/rewe-markt-dammweg-10/"
+  },
+  {
+    "wwIdent": "865790",
+    "name": "REWE Markt",
+    "street": "Hauptstrasse 83",
+    "city": "Oppenweiler",
+    "latitude": 48.98713,
+    "longitude": 9.4608,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/oppenweiler/865790/rewe-markt-hauptstrasse-83/"
+  },
+  {
+    "wwIdent": "9085995",
+    "name": "REWE Markt",
+    "street": "Hutstr. 1",
+    "city": "Untersiemau",
+    "latitude": 50.19687,
+    "longitude": 10.96495,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/untersiemau/9085995/rewe-markt-hutstr-1/"
+  },
+  {
+    "wwIdent": "1465064",
+    "name": "REWE Markt",
+    "street": "An der Nachtweide 2-4",
+    "city": "Altenstadt",
+    "latitude": 50.27587,
+    "longitude": 8.9486,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/altenstadt/1465064/rewe-markt-an-der-nachtweide-2-4/"
+  },
+  {
+    "wwIdent": "240240",
+    "name": "REWE Markt",
+    "street": "Bahnhofstr. 80-82",
+    "city": "Sulzbach",
+    "latitude": 49.91924,
+    "longitude": 9.14807,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/sulzbach/240240/rewe-markt-bahnhofstr-80-82/"
+  },
+  {
+    "wwIdent": "240261",
+    "name": "REWE Markt",
+    "street": "Hauptstr. 280",
+    "city": "Mespelbrunn",
+    "latitude": 49.90431,
+    "longitude": 9.29755,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/mespelbrunn/240261/rewe-markt-hauptstr-280/"
+  },
+  {
+    "wwIdent": "840386",
+    "name": "REWE Markt",
+    "street": "Hindenburgstr. 5",
+    "city": "Ostfildern / Nellingen",
+    "latitude": 48.71428,
+    "longitude": 9.30053,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/ostfildern-nellingen/840386/rewe-markt-hindenburgstr-5/"
+  },
+  {
+    "wwIdent": "1466019",
+    "name": "REWE Markt",
+    "street": "Bahnhofstraße 58-60",
+    "city": "Eiterfeld",
+    "latitude": 50.75774,
+    "longitude": 9.80597,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/eiterfeld/1466019/rewe-markt-bahnhofstrasse-58-60/"
+  },
+  {
+    "wwIdent": "440609",
+    "name": "REWE Markt",
+    "street": "Hauptstr. 11 a",
+    "city": "Rain am Lech",
+    "latitude": 48.69004,
+    "longitude": 10.91977,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/rain-am-lech/440609/rewe-markt-hauptstr-11-a/"
+  },
+  {
+    "wwIdent": "840897",
+    "name": "REWE Markt",
+    "street": "Bahnhofstr. 76",
+    "city": "Wendlingen",
+    "latitude": 48.67572,
+    "longitude": 9.37627,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/wendlingen/840897/rewe-markt-bahnhofstr-76/"
+  },
+  {
+    "wwIdent": "862020",
+    "name": "REWE Markt",
+    "street": "Bahnhofstr. 94",
+    "city": "Geislingen an der Steige",
+    "latitude": 48.62382,
+    "longitude": 9.83502,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/geislingen-an-der-steige/862020/rewe-markt-bahnhofstr-94/"
+  },
+  {
+    "wwIdent": "230487",
+    "name": "REWE Center",
+    "street": "Gehrener Ring 1",
+    "city": "Nidderau/Heldenbergen",
+    "latitude": 50.2278,
+    "longitude": 8.8728,
+    "marketType": "REWE Center",
+    "offersUrl": "https://www.rewe.de/angebote/nidderauheldenbergen/230487/rewe-center-gehrener-ring-1/"
+  },
+  {
+    "wwIdent": "431065",
+    "name": "REWE Markt",
+    "street": "Hauptstraße 1 a",
+    "city": "Fischach",
+    "latitude": 48.28984,
+    "longitude": 10.65703,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/fischach/431065/rewe-markt-hauptstrasse-1-a/"
+  },
+  {
+    "wwIdent": "565676",
+    "name": "REWE Markt",
+    "street": "Bahnhofplatz 1",
+    "city": "Horb am Neckar",
+    "latitude": 48.4425,
+    "longitude": 8.6908,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/horb-am-neckar/565676/rewe-markt-bahnhofplatz-1/"
+  },
+  {
+    "wwIdent": "861696",
+    "name": "REWE Markt",
+    "street": "Hauptstrasse 28",
+    "city": "Pfaffenhofen an der Roth",
+    "latitude": 48.35407,
+    "longitude": 10.16213,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/pfaffenhofen-an-der-roth/861696/rewe-markt-hauptstrasse-28/"
+  },
+  {
+    "wwIdent": "562344",
+    "name": "REWE Markt",
+    "street": "Kapellenstraße 6",
+    "city": "Bamberg",
+    "latitude": 49.88999,
+    "longitude": 10.90773,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/bamberg/562344/rewe-markt-kapellenstrasse-6/"
+  },
+  {
+    "wwIdent": "565854",
+    "name": "REWE Markt",
+    "street": "Ipftreff 1",
+    "city": "Bopfingen",
+    "latitude": 48.85882,
+    "longitude": 10.35462,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/bopfingen/565854/rewe-markt-ipftreff-1/"
+  },
+  {
+    "wwIdent": "810065",
+    "name": "REWE Markt",
+    "street": "Residenzstr. 2 - 6",
+    "city": "Ansbach",
+    "latitude": 49.30571,
+    "longitude": 10.56809,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/ansbach/810065/rewe-markt-residenzstr-2---6/"
+  },
+  {
+    "wwIdent": "8545540",
+    "name": "REWE Markt",
+    "street": "Gewerbestr. 2",
+    "city": "Kutzenhausen",
+    "latitude": 48.32339,
+    "longitude": 10.67839,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/kutzenhausen/8545540/rewe-markt-gewerbestr-2/"
+  },
+  {
+    "wwIdent": "440330",
+    "name": "REWE Familie Freund- dein Freund in Pfaffenhofen",
+    "street": "Türltorstr. 5",
+    "city": "Pfaffenhofen",
+    "latitude": 48.53145,
+    "longitude": 11.50872,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/pfaffenhofen/440330/rewe-markt-tuerltorstr-5/"
+  },
+  {
+    "wwIdent": "440523",
+    "name": "REWE Markt",
+    "street": "Luitpoldstr. 4",
+    "city": "Söcking",
+    "latitude": 48.00347,
+    "longitude": 11.31835,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/soecking/440523/rewe-markt-luitpoldstr-4/"
+  },
+  {
+    "wwIdent": "440379",
+    "name": "REWE Markt",
+    "street": "Dr.-Schrettenbrunner-Str. 9",
+    "city": "Parsberg",
+    "latitude": 49.16086,
+    "longitude": 11.71784,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/parsberg/440379/rewe-markt-dr-schrettenbrunner-str-9/"
+  },
+  {
+    "wwIdent": "320970",
+    "name": "REWE Markt",
+    "street": "Feringastr. 6",
+    "city": "Unterföhring",
+    "latitude": 48.17812,
+    "longitude": 11.63311,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/unterfoehring/320970/rewe-markt-feringastr-6/"
+  },
+  {
+    "wwIdent": "440686",
+    "name": "REWE Markt",
+    "street": "Tresdorf 7 C",
+    "city": "Tittling/ Tresdorf",
+    "latitude": 48.73552,
+    "longitude": 13.37381,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/tittling-tresdorf/440686/rewe-markt-tresdorf-7-c/"
+  },
+  {
+    "wwIdent": "320549",
+    "name": "REWE Stolper - Qualität seit 1905",
+    "street": "Jakobistr. 9",
+    "city": "Soest",
+    "latitude": 51.57046,
+    "longitude": 8.10744,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/soest/320549/rewe-markt-jakobistr-9/"
+  },
+  {
+    "wwIdent": "1765745",
+    "name": "REWE Markt",
+    "street": "Bahnhofstr. 16",
+    "city": "Nettetal / Kaldenkirchen",
+    "latitude": 51.32473,
+    "longitude": 6.19971,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/nettetal-kaldenkirchen/1765745/rewe-markt-bahnhofstr-16/"
+  },
+  {
+    "wwIdent": "1465598",
+    "name": "REWE Heiderich in Medebach",
+    "street": "Glindfelder Weg 1",
+    "city": "Medebach",
+    "latitude": 51.20066,
+    "longitude": 8.69864,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/medebach/1465598/rewe-markt-glindfelder-weg-1/"
+  },
+  {
+    "wwIdent": "440927",
+    "name": "REWE Markt",
+    "street": "Dr.-Alexander-Str. 80",
+    "city": "Boizenburg / Elbe",
+    "latitude": 53.38569,
+    "longitude": 10.72993,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/boizenburg-elbe/440927/rewe-markt-dr-alexander-str-80/"
+  },
+  {
+    "wwIdent": "562026",
+    "name": "REWE Preisner",
+    "street": "Hauptstr. 6",
+    "city": "Kalefeld/Echte",
+    "latitude": 51.78762,
+    "longitude": 10.06265,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/kalefeldechte/562026/rewe-markt-hauptstr-6/"
+  },
+  {
+    "wwIdent": "562068",
+    "name": "REWE Markt",
+    "street": "Hauptstr. 262 c",
+    "city": "Asemissen",
+    "latitude": 51.98775,
+    "longitude": 8.67448,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/asemissen/562068/rewe-markt-hauptstr-262-c/"
+  },
+  {
+    "wwIdent": "531066",
+    "name": "REWE Markt",
+    "street": "Viktoriastr. 19",
+    "city": "Minden",
+    "latitude": 52.28958,
+    "longitude": 8.93862,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/minden/531066/rewe-markt-viktoriastr-19/"
+  },
+  {
+    "wwIdent": "8542022",
+    "name": "REWE Markt",
+    "street": "Bahnhofstraße 5",
+    "city": "Alfeld",
+    "latitude": 51.98303,
+    "longitude": 9.82379,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/alfeld/8542022/rewe-markt-bahnhofstrasse-5/"
+  },
+  {
+    "wwIdent": "1765993",
+    "name": "REWE Sven Krämer oHG",
+    "street": "Raiffeisenstr. 1",
+    "city": "Delitzsch",
+    "latitude": 51.51123,
+    "longitude": 12.33486,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/delitzsch/1765993/rewe-markt-raiffeisenstr-1/"
   }
 ]
