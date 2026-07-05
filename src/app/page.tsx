@@ -145,7 +145,7 @@ export default function Home() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.4.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-zinc-500 font-normal">v1.5.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -215,7 +215,12 @@ export default function Home() {
               <div className="flex items-start gap-2 pr-8">
                 <div className="flex-1 min-w-0">
                   <h2 className="font-semibold text-sm">{selectedStore.name}</h2>
-                  <p className="text-xs text-zinc-500 mt-1">{selectedStore.address}</p>
+                  {selectedStore.address && (
+                    <p className="text-xs text-zinc-500 mt-1">{selectedStore.address}</p>
+                  )}
+                  {selectedStore.openingHours && (
+                    <p className="text-xs text-zinc-400 mt-1 font-mono">{selectedStore.openingHours}</p>
+                  )}
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-2">
@@ -227,14 +232,20 @@ export default function Home() {
                   <span className="text-xs text-zinc-500">National prospectus</span>
                 )}
               </div>
-              <Button className="w-full mt-3" size="sm"
-                onClick={() => fetchMutation.mutate(selectedStore.id)} disabled={fetchMutation.isPending}>
-                {fetchMutation.isPending ? (
-                  <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Fetching...</>
-                ) : (
-                  <><Package className="w-4 h-4 mr-2" /> Fetch Discounts</>
-                )}
-              </Button>
+              {selectedStore.brand === "rewe" && !selectedStore.offersUrl ? (
+                <div className="mt-3 p-2 rounded-md bg-amber-950/40 border border-amber-800/50 text-xs text-amber-300">
+                  No offers URL configured for this store yet. Only stores with known REWE offer URLs can be fetched.
+                </div>
+              ) : (
+                <Button className="w-full mt-3" size="sm"
+                  onClick={() => fetchMutation.mutate(selectedStore.id)} disabled={fetchMutation.isPending}>
+                  {fetchMutation.isPending ? (
+                    <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Fetching...</>
+                  ) : (
+                    <><Package className="w-4 h-4 mr-2" /> Fetch Discounts</>
+                  )}
+                </Button>
+              )}
               {fetchMutation.isError && (() => {
                 const err = fetchMutation.error as Error & {
                   code?: string; stage?: string; retryable?: boolean;

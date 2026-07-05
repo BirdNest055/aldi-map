@@ -21,8 +21,18 @@ CREATE TABLE IF NOT EXISTS discounts (
   category TEXT,
   valid_from TEXT,
   valid_until TEXT,
-  fetched_at TIMESTAMPTZ DEFAULT NOW()
+  fetched_at TIMESTAMPTZ DEFAULT NOW(),
+  -- Generated column for efficient "on sale" filtering
+  -- (PostgREST doesn't support column-to-column comparison)
+  is_on_sale BOOLEAN GENERATED ALWAYS AS (
+    price IS NOT NULL AND regular_price IS NOT NULL AND price < regular_price
+  ) STORED
 );
+
+-- Backfill column for existing installs (idempotent)
+ALTER TABLE discounts ADD COLUMN IF NOT EXISTS is_on_sale BOOLEAN GENERATED ALWAYS AS (
+  price IS NOT NULL AND regular_price IS NOT NULL AND price < regular_price
+) STORED;
 
 CREATE TABLE IF NOT EXISTS fetch_log (
   id BIGSERIAL PRIMARY KEY,

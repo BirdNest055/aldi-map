@@ -50,6 +50,7 @@
         "framer-motion": "^12.23.2",
         "input-otp": "^1.4.2",
         "leaflet": "^1.9.4",
+        "leaflet.markercluster": "^1.5.3",
         "lucide-react": "^0.525.0",
         "next": "^16.1.1",
         "next-auth": "^4.24.11",
@@ -61,6 +62,11 @@
         "react-dom": "^19.0.0",
         "react-hook-form": "^7.60.0",
         "react-leaflet": "^5.0.0",
+<<<<<<< HEAD
+=======
+        "react-leaflet-cluster": "^4.1.3",
+        "react-leaflet-markercluster": "^5.0.0-rc.0",
+>>>>>>> origin/dev
         "react-markdown": "^10.1.0",
         "react-resizable-panels": "^3.0.3",
         "react-syntax-highlighter": "^15.6.1",
@@ -1689,6 +1695,13 @@
 
     "react-leaflet": ["react-leaflet@5.0.0", "", { "dependencies": { "@react-leaflet/core": "^3.0.0" }, "peerDependencies": { "leaflet": "^1.9.0", "react": "^19.0.0", "react-dom": "^19.0.0" } }, "sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw=="],
 
+<<<<<<< HEAD
+=======
+    "react-leaflet-cluster": ["react-leaflet-cluster@4.1.3", "", { "dependencies": { "leaflet.markercluster": "^1.5.3" }, "peerDependencies": { "@react-leaflet/core": "^3.0.0", "leaflet": "^1.9.0", "react": "^19.0.0", "react-dom": "^19.0.0", "react-leaflet": "^5.0.0" } }, "sha512-b3ICS7r9Fs5hBWrFPMVnmkCuDewyG3m1GaGzamXY0eryyAXDfQ+ikSkiR/mVethueIIA5MSyLok2/KsZVotspQ=="],
+
+    "react-leaflet-markercluster": ["react-leaflet-markercluster@5.0.0-rc.0", "", { "dependencies": { "@react-leaflet/core": "^3.0.0", "leaflet": "^1.9.4", "leaflet.markercluster": "^1.5.3", "react-leaflet": "^5.0.0" }, "peerDependencies": { "react": "^19.0.0" } }, "sha512-jWa4bPD5LfLV3Lid1RWgl+yKUuQtnqeYtJzzLb/fiRjvX+rtwzY8pMoUFuygqyxNrWxMTQlWKBHxkpI7Sxvu4Q=="],
+
+>>>>>>> origin/dev
     "react-markdown": ["react-markdown@10.1.0", "https://registry.npmjs.com/react-markdown/-/react-markdown-10.1.0.tgz", { "dependencies": { "@types/hast": "^3.0.0", "@types/mdast": "^4.0.0", "devlop": "^1.0.0", "hast-util-to-jsx-runtime": "^2.0.0", "html-url-attributes": "^3.0.0", "mdast-util-to-hast": "^13.0.0", "remark-parse": "^11.0.0", "remark-rehype": "^11.0.0", "unified": "^11.0.0", "unist-util-visit": "^5.0.0", "vfile": "^6.0.0" }, "peerDependencies": { "@types/react": ">=18", "react": ">=18" } }, "sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ=="],
 
     "react-remove-scroll": ["react-remove-scroll@2.7.2", "https://registry.npmjs.com/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz", { "dependencies": { "react-remove-scroll-bar": "^2.3.7", "react-style-singleton": "^2.2.3", "tslib": "^2.1.0", "use-callback-ref": "^1.3.3", "use-sidecar": "^1.1.3" }, "peerDependencies": { "@types/react": "*", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc" }, "optionalPeers": ["@types/react"] }, "sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q=="],
