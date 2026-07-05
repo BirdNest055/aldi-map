@@ -138,43 +138,42 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
-  // Product search — finds stores that have a matching product, highlights them on the map
-  const handleProductSearch = useCallback(async () => {
+  // Product search — debounced, highlights markers that have matching products
+  useEffect(() => {
     if (!productSearch || productSearch.trim().length < 2) {
       setHighlightedStoreIds(null);
       setStorePrices(null);
       return;
     }
     setProductSearchLoading(true);
-    try {
-      // Search discounts across all stores via the discount-database API
-      const res = await fetch(
-        `https://aldi-web-git-main-birdnest055s-projects.vercel.app/api/products?search=${encodeURIComponent(productSearch)}&pageSize=500`
-      );
-      const data = await res.json();
-      const highlightSet = new Set<string>();
-      const priceMap = new Map<string, number>();
-      for (const p of (data.items || [])) {
-        // Map discount-database store_id to map store_id
-        // The discounts table uses store_ids like "rewe-erlangen-1" or "rewe-bayern-441078"
-        // The map uses the same store_ids
-        const sid = p.store_id;
-        highlightSet.add(sid);
-        const price = p.price;
-        if (price != null) {
-          const existing = priceMap.get(sid);
-          if (existing === undefined || price < existing) {
-            priceMap.set(sid, price);
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `https://aldi-web-git-main-birdnest055s-projects.vercel.app/api/products?search=${encodeURIComponent(productSearch)}&pageSize=500`
+        );
+        const data = await res.json();
+        const highlightSet = new Set<string>();
+        const priceMap = new Map<string, number>();
+        for (const p of (data.items || [])) {
+          const sid = p.store_id;
+          highlightSet.add(sid);
+          const price = p.price;
+          if (price != null) {
+            const existing = priceMap.get(sid);
+            if (existing === undefined || price < existing) {
+              priceMap.set(sid, price);
+            }
           }
         }
+        setHighlightedStoreIds(highlightSet);
+        setStorePrices(priceMap);
+      } catch {
+        setHighlightedStoreIds(null);
+        setStorePrices(null);
       }
-      setHighlightedStoreIds(highlightSet);
-      setStorePrices(priceMap);
-    } catch {
-      setHighlightedStoreIds(null);
-      setStorePrices(null);
-    }
-    setProductSearchLoading(false);
+      setProductSearchLoading(false);
+    }, 400);
+    return () => clearTimeout(timer);
   }, [productSearch]);
 
   // Refresh discounts for the selected store
@@ -214,7 +213,7 @@ export default function Home() {
       <header className="border-b border-gray-200 bg-white/90 backdrop-blur shadow-sm z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.7.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.8.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -226,10 +225,10 @@ export default function Home() {
               className="pl-9 bg-gray-100 border-gray-300 h-9"
             />
             {searchResults.length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-zinc-800 border border-zinc-700 rounded-md shadow-lg z-[1001] max-h-60 overflow-y-auto">
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-[1001] max-h-60 overflow-y-auto">
                 {searchResults.map((r, i) => (
                   <button key={i} onClick={() => handleSelectSearchResult(r)}
-                    className="w-full text-left px-3 py-2 text-sm hover:bg-gray-200 truncate">
+                    className="w-full text-left px-3 py-2 text-sm hover:bg-blue-50 text-gray-900 border-b border-gray-100 last:border-0 truncate">
                     {r.displayName}
                   </button>
                 ))}
@@ -239,12 +238,12 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-1">
           <button onClick={() => setBrandFilter("all")}
-            className={`px-3 py-1.5 text-xs rounded-md font-medium transition ${brandFilter === "all" ? "bg-zinc-100 text-zinc-900" : "bg-zinc-800 text-gray-500 hover:text-gray-700"}`}>
+            className={`px-3 py-1.5 text-xs rounded-md font-medium transition ${brandFilter === "all" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-900"}`}>
             All
           </button>
           {availableBrands.map((brand) => (
             <button key={brand} onClick={() => setBrandFilter(brand)}
-              className={`px-3 py-1.5 text-xs rounded-md font-medium transition flex items-center gap-1.5 ${brandFilter === brand ? "bg-zinc-100 text-zinc-900" : "bg-zinc-800 text-gray-500 hover:text-gray-700"}`}>
+              className={`px-3 py-1.5 text-xs rounded-md font-medium transition flex items-center gap-1.5 ${brandFilter === brand ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-900"}`}>
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: BRAND_COLORS[brand] || "#888" }} />
               {brand === "aldi-sued" ? "ALDI" : brand === "rewe" ? "REWE" : brand}
             </button>
@@ -257,7 +256,7 @@ export default function Home() {
             placeholder="Search product..."
             value={productSearch}
             onChange={(e) => setProductSearch(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleProductSearch()}
+            
             className="pl-9 pr-8 bg-gray-100 border-gray-300 h-9"
           />
           {productSearchLoading && <Loader2 className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 animate-spin text-gray-500" />}
@@ -297,7 +296,7 @@ export default function Home() {
           <aside className="w-full sm:w-80 border-l border-gray-200 bg-white overflow-y-auto flex flex-col border-l border-gray-200">
             <div className="p-4 border-b border-gray-200 relative">
               <button onClick={() => { setSelectedStore(null); setAsyncFetching(false); }}
-                className="absolute top-3 right-3 p-1.5 rounded-md hover:bg-zinc-800 text-gray-500 hover:text-gray-700 transition" aria-label="Close">
+                className="absolute top-3 right-3 p-1.5 rounded-md hover:bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-900 transition" aria-label="Close">
                 <X className="w-4 h-4" />
               </button>
               <div className="flex items-start gap-2 pr-8">
