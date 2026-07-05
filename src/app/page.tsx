@@ -223,7 +223,6 @@ export default function Home() {
               placeholder="Search city..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
               className="pl-9 bg-gray-100 border-gray-300 h-9"
             />
             {searchResults.length > 0 && (
@@ -251,8 +250,28 @@ export default function Home() {
             </button>
           ))}
         </div>
+        {/* Product search — highlights matching markers on the map */}
+        <div className="relative max-w-xs">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+          <Input
+            placeholder="Search product..."
+            value={productSearch}
+            onChange={(e) => setProductSearch(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleProductSearch()}
+            className="pl-9 pr-8 bg-gray-100 border-gray-300 h-9"
+          />
+          {productSearchLoading && <Loader2 className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 animate-spin text-gray-500" />}
+          {highlightedStoreIds && (
+            <button
+              onClick={() => { setHighlightedStoreIds(null); setStorePrices(null); setProductSearch(""); }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
         {stores && (
-          <Badge variant="outline" className="text-gray-500">{filteredStores.length} stores</Badge>
+          <Badge variant="outline" className="text-gray-500">{highlightedStoreIds ? `${highlightedStoreIds.size} matches` : `${filteredStores.length} stores`}</Badge>
         )}
       </header>
 
