@@ -149,7 +149,7 @@ export default function Home() {
     const timer = setTimeout(async () => {
       try {
         const res = await fetch(
-          `https://aldi-web-git-main-birdnest055s-projects.vercel.app/api/products?search=${encodeURIComponent(productSearch)}&pageSize=500`
+          `/api/product-search?q=${encodeURIComponent(productSearch)}`
         );
         const data = await res.json();
         const highlightSet = new Set<string>();
