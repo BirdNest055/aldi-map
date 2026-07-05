@@ -43963,6 +43963,16 @@
     "offersUrl": "https://www.rewe.de/angebote/nettetal-kaldenkirchen/1765745/rewe-markt-bahnhofstr-16/"
   },
   {
+    "wwIdent": "1465598",
+    "name": "REWE Heiderich in Medebach",
+    "street": "Glindfelder Weg 1",
+    "city": "Medebach",
+    "latitude": 51.20066,
+    "longitude": 8.69864,
+    "marketType": "REWE Markt",
+    "offersUrl": "https://www.rewe.de/angebote/medebach/1465598/rewe-markt-glindfelder-weg-1/"
+  },
+  {
     "wwIdent": "440927",
     "name": "REWE Markt",
     "street": "Dr.-Alexander-Str. 80",
