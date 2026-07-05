@@ -68,11 +68,8 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.60.0",
     "react-leaflet": "^5.0.0",
-<<<<<<< HEAD
-=======
     "react-leaflet-cluster": "^4.1.3",
     "react-leaflet-markercluster": "^5.0.0-rc.0",
->>>>>>> origin/dev
     "react-markdown": "^10.1.0",
     "react-resizable-panels": "^3.0.3",
     "react-syntax-highlighter": "^15.6.1",
