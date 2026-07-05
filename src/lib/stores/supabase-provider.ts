@@ -2,11 +2,6 @@ import type { StoreProvider, Store, Bounds } from "@/lib/types";
 import { createClient } from "@supabase/supabase-js";
 import { Errors } from "@/lib/errors";
 
-/**
- * Store provider that reads from Supabase stores table.
- * Caches stores in-memory for 5 minutes.
- * Paginates (500 per page) to get all stores — Supabase REST API caps at 1000 per request.
- */
 export class SupabaseStoreProvider implements StoreProvider {
   private client: any;
   private cache: Store[] | null = null;
@@ -27,10 +22,10 @@ export class SupabaseStoreProvider implements StoreProvider {
       return this.cache;
     }
 
-    // Paginate — Supabase REST API returns max 1000 rows per request
     const PAGE_SIZE = 500;
     let allData: any[] = [];
     let offset = 0;
+    const seenIds = new Set<string>();
 
     while (true) {
       const { data, error } = await this.client
@@ -39,6 +34,7 @@ export class SupabaseStoreProvider implements StoreProvider {
         .eq("is_active", true)
         .order("brand")
         .order("name")
+        .order("id")  // deterministic sort — prevents duplicate rows across pages
         .range(offset, offset + PAGE_SIZE - 1);
 
       if (error) {
@@ -48,7 +44,15 @@ export class SupabaseStoreProvider implements StoreProvider {
       }
 
       if (!data || data.length === 0) break;
-      allData = allData.concat(data);
+      
+      // Dedup by ID (safety net against pagination edge cases)
+      for (const row of data) {
+        if (!seenIds.has(row.id)) {
+          seenIds.add(row.id);
+          allData.push(row);
+        }
+      }
+      
       if (data.length < PAGE_SIZE) break;
       offset += PAGE_SIZE;
     }
