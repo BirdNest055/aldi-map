@@ -4,15 +4,14 @@ import { Errors } from "@/lib/errors";
 
 /**
  * Store provider that reads from Supabase stores table.
- * This is the production provider — replaces JsonStoreProvider.
- * 
- * Caches stores in-memory for 5 minutes to avoid hitting Supabase on every request.
+ * Caches stores in-memory for 5 minutes.
+ * Paginates (500 per page) to get all stores — Supabase REST API caps at 1000 per request.
  */
 export class SupabaseStoreProvider implements StoreProvider {
   private client: any;
   private cache: Store[] | null = null;
   private cacheTime: number = 0;
-  private cacheTtlMs: number = 5 * 60 * 1000; // 5 minutes
+  private cacheTtlMs: number = 5 * 60 * 1000;
 
   constructor() {
     const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || "";
@@ -24,28 +23,37 @@ export class SupabaseStoreProvider implements StoreProvider {
   }
 
   private async loadStores(): Promise<Store[]> {
-    // Check cache
     if (this.cache && Date.now() - this.cacheTime < this.cacheTtlMs) {
       return this.cache;
     }
 
-    // Fetch from Supabase
-    const { data, error } = await this.client
-      .from("stores")
-      .select("*")
-      .eq("is_active", true)
-      .order("brand")
-      .order("name")
-      .limit(10000);
+    // Paginate — Supabase REST API returns max 1000 rows per request
+    const PAGE_SIZE = 500;
+    let allData: any[] = [];
+    let offset = 0;
 
-    if (error) {
-      throw Errors.storage(`Failed to load stores: ${error.message}`, {
-        cause: error.code,
-      });
+    while (true) {
+      const { data, error } = await this.client
+        .from("stores")
+        .select("*")
+        .eq("is_active", true)
+        .order("brand")
+        .order("name")
+        .range(offset, offset + PAGE_SIZE - 1);
+
+      if (error) {
+        throw Errors.storage(`Failed to load stores: ${error.message}`, {
+          cause: error.code,
+        });
+      }
+
+      if (!data || data.length === 0) break;
+      allData = allData.concat(data);
+      if (data.length < PAGE_SIZE) break;
+      offset += PAGE_SIZE;
     }
 
-    // Map to Store interface
-    this.cache = (data || []).map((row: any) => ({
+    this.cache = allData.map((row: any) => ({
       id: row.id,
       name: row.name,
       brand: row.brand,
@@ -78,7 +86,6 @@ export class SupabaseStoreProvider implements StoreProvider {
   }
 }
 
-// Singleton
 let _provider: SupabaseStoreProvider | null = null;
 
 export function getStoreProvider(): SupabaseStoreProvider {
