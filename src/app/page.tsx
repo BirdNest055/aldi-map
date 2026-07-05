@@ -62,6 +62,10 @@ export default function Home() {
     if (!stores) return [];
     let result = stores;
     if (brandFilter !== "all") result = result.filter((s) => s.brand === brandFilter);
+    // When product search is active, ONLY show stores that have the product
+    if (highlightedStoreIds && highlightedStoreIds.size > 0) {
+      result = result.filter((s) => highlightedStoreIds.has(s.id));
+    }
     // Remove duplicate stores (same lat/lng within ~50m)
     const seen = new Set<string>();
     result = result.filter((s) => {
@@ -71,7 +75,7 @@ export default function Home() {
       return true;
     });
     return result;
-  }, [stores, brandFilter]);
+  }, [stores, brandFilter, highlightedStoreIds]);
 
   // Determine the effective store ID for discounts (ALDI = national)
   const effectiveStoreId = useMemo(() => {
