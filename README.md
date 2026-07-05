@@ -223,10 +223,26 @@ ALDI stores are exempt — they share a national prospectus auto-fetched by
 | `/api/auto-fetch/settings` | PUT | Body: `{storeId, intervalOption: "24h"\|"3d"\|"1w"\|"off"}` |
 | `/api/auto-fetch/scheduler` | POST | Vercel Cron entry point. Requires `Authorization: Bearer $CRON_SECRET` |
 
+## REWE offersUrl discovery
+
+REWE stores from OSM don't include their `offersUrl` (the URL needed for fetching
+discounts). The `scripts/` directory contains tools to discover these URLs:
+
+- `discover-rewe-offers-urls.py` — main discovery script (processes cities in bulk)
+- `discover-single-city.py` — processes one city (used by batch runner)
+- `discover-batch.py` — runs single-city in subprocesses for crash isolation
+
+**Strategy:** for each city with OSM REWE stores, visit `https://www.rewe.de/marktsuche/<city-slug>/`
+via CloakBrowser, extract store offers URLs from the page, match by street name to OSM stores.
+
+**Progress:** discovery is ongoing. As of v1.5.1, ~70 REWE stores have offersUrls discovered
+(out of ~2,017 total). Run `python3 scripts/discover-batch.py` to continue.
+
 ## Version history
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.5.1 | 2026-07-05 | REWE offersUrl discovery scripts (CloakBrowser-based), 68 stores now fetchable |
 | 1.5.0 | 2026-07-04 | 2,186 OSM stores (REWE + ALDI SÜD nationwide), marker clustering, opening hours in sidebar, is_on_sale generated column |
 | 1.4.0 | 2026-07-04 | Auto-fetch for regional stores: per-store GUI control (24h/3d/1w/off), Vercel Cron scheduler, auto-disable after 3 failures, fetch_log audit, 79 vitest tests |
 | 1.3.0 | 2026-07-04 | Comprehensive error handling: typed ApiError, fetch_log audit, error boundaries, retry-aware UI, health check |
