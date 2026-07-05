@@ -7372,7 +7372,8 @@
     "source": "osm",
     "osmId": 420288204,
     "openingHours": "Mo-Fr 06:00-22:00; Sa 06:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/arnstadt/1766038/rewe-markt-turnvater-jahn-str-6/",
+    "reweId": "1766038"
   },
   {
     "id": "rewe-osm-427549292",
@@ -7841,7 +7842,8 @@
     "source": "osm",
     "osmId": 724941446,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg-haunstetten/440557/rewe-markt-im-tal-9/",
+    "reweId": "440557"
   },
   {
     "id": "rewe-osm-736921286",
@@ -8165,7 +8167,8 @@
     "source": "osm",
     "osmId": 1111420757,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg-haunstetten/440495/rewe-markt-haunstetter-str-239-241/",
+    "reweId": "440495"
   },
   {
     "id": "rewe-osm-1112048250",
@@ -8729,7 +8732,8 @@
     "source": "osm",
     "osmId": 1557116094,
     "openingHours": "Mo-Sa 07:00-20:00; Dec 24 07:00-14:00; Dec 31 07:00-16:00; PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg-lechhausen/865730/rewe-markt-neuburger-str-176/",
+    "reweId": "865730"
   },
   {
     "id": "rewe-osm-1558232638",
@@ -10110,7 +10114,8 @@
     "source": "osm",
     "osmId": 3803341689,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg/431080/rewe-center-stadtberger-str-99/",
+    "reweId": "431080"
   },
   {
     "id": "rewe-osm-3837178522",
@@ -10866,7 +10871,8 @@
     "source": "osm",
     "osmId": 5917965144,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg/562341/rewe-markt-buergermeister-fischer-str-11/",
+    "reweId": "562341"
   },
   {
     "id": "rewe-osm-5961326937",
@@ -11178,7 +11184,8 @@
     "source": "osm",
     "osmId": 7275437899,
     "openingHours": "Mo-Sa 07:00-20:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/augsburg/441050/rewe-markt-am-technologiezentrum-1/",
+    "reweId": "441050"
   },
   {
     "id": "rewe-osm-7343457676",
@@ -14504,7 +14511,8 @@
     "source": "osm",
     "osmId": 4882158840,
     "openingHours": "Mo-Sa 07:00-20:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/apolda/1469686/rewe-markt-str-des-friedens-2/",
+    "reweId": "1469686"
   },
   {
     "id": "rewe-osm-4893280813",
@@ -16412,7 +16420,8 @@
     "source": "osm",
     "osmId": 335549728,
     "openingHours": "Mo-Sa 07:00-22:00",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/arnsberg-oeventrop/250369/rewe-markt-widayweg-2-4/",
+    "reweId": "250369"
   },
   {
     "id": "rewe-osm-339859850",
@@ -26136,7 +26145,8 @@
     "source": "osm",
     "osmId": 2115760851,
     "openingHours": "Mo-Sa 07:00-22:00; Su,PH off",
-    "offersUrl": null
+    "offersUrl": "https://www.rewe.de/angebote/angermuende/2400015/rewe-markt-prenzlauer-str-41/",
+    "reweId": "2400015"
   },
   {
     "id": "rewe-osm-2119989292",
