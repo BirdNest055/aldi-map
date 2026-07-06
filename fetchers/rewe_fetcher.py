@@ -67,6 +67,81 @@ def is_valid(name, price):
     if re.match(r"^\d+,\d+\s*€?$", name.strip()): return False
     return len(name.strip()) >= 3
 
+# ---------------------------------------------------------------------------
+# Size / quantity extraction
+# ---------------------------------------------------------------------------
+# Extracts size/weight/volume info from a text string (typically the product
+# description line on the REWE flyer page) and returns a clean display string
+# like "4x150 g", "1 L", "500 g", "10 Stk". Returns None if no pattern found.
+#
+# Patterns supported (German supermarket conventions):
+#   "4 x 150 g"  →  "4x150 g"
+#   "1,5 l"      →  "1,5 L"
+#   "500g"       →  "500 g"
+#   "1 kg"       →  "1 kg"
+#   "10 Stück"   →  "10 Stk"
+#   "6er Pack"   →  "6er Pack"
+
+_MULTI_RE = re.compile(r'(\d+)\s*[x×]\s*(\d+(?:[,.]\d+)?)\s*(l|liter|ml|g|kg|gramm)\b', re.I)
+_SINGLE_RE = re.compile(r'(\d+(?:[,.]\d+)?)\s*(l|liter|ml|g|kg|gramm)\b', re.I)
+_COUNT_RE = re.compile(r'(\d+)\s*(stk|stück|stueck|st)\b', re.I)
+_PACK_RE = re.compile(r'(\d+)er\s*(pack|packung|pck|tabletten|kapseln|beutel|tüten|rolls?|rolle)\b', re.I)
+
+def extract_size(text):
+    """Find the first size/quantity pattern in text. Returns display string or None."""
+    if not text:
+        return None
+
+    # Try multipack first (most specific): "6 x 1,5 l"
+    m = _MULTI_RE.search(text)
+    if m:
+        count, each, unit = m.group(1), m.group(2), m.group(3).lower()
+        unit_norm = "L" if unit in ("l", "liter") else unit
+        return f"{count}x{each} {unit_norm}"
+
+    # Single quantity: "500g", "1L", "0,5 l"
+    m = _SINGLE_RE.search(text)
+    if m:
+        value, unit = m.group(1), m.group(2).lower()
+        unit_norm = "L" if unit in ("l", "liter") else unit
+        return f"{value} {unit_norm}"
+
+    # Count: "10 Stück", "6 Stk"
+    m = _COUNT_RE.search(text)
+    if m:
+        return f"{m.group(1)} Stk"
+
+    # Pack: "6er Packung", "10er Pack"
+    m = _PACK_RE.search(text)
+    if m:
+        return m.group(0).strip()
+
+    return None
+
+
+def enrich_title_with_size(name, description):
+    """Append size info from description to the product name if not already present.
+
+    Example:
+      name="Ehrmann Almighurt", description="4x150g verschiedene Sorten"
+      → "Ehrmann Almighurt 4x150 g"
+    """
+    if not name:
+        return name
+
+    # First check if size is already in the name
+    size_in_name = extract_size(name)
+    if size_in_name:
+        return name  # Size already in title, don't duplicate
+
+    # Try to extract from description
+    if description:
+        size = extract_size(description)
+        if size:
+            return f"{name} {size}"
+
+    return name
+
 
 def fetch_rewe_offers(store_url):
     """Fetch all offers from a REWE store page. Raises FetchError on failure."""
@@ -154,10 +229,15 @@ def fetch_rewe_offers(store_url):
             name = p.get("name","").strip()
             price = parse_price(p.get("price",""))
             if not is_valid(name, price): continue
+            # Enrich the title with size/weight info extracted from the description.
+            # The description often contains text like "4x150g", "1L", "500 g" etc.
+            # which is critical for users to compare products meaningfully.
+            desc = p.get("description","")[:200]
+            enriched_name = enrich_title_with_size(name, desc)
             products.append({
-                "productTitle": name, "brand": None, "price": price,
+                "productTitle": enriched_name, "brand": None, "price": price,
                 "regularPrice": None, "currency": "EUR",
-                "category": p.get("category",""), "description": p.get("description","")[:200],
+                "category": p.get("category",""), "description": desc,
                 "label": p.get("label",""), "fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             })
 
