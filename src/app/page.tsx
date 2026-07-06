@@ -64,7 +64,35 @@ export default function Home() {
     if (brandFilter !== "all") result = result.filter((s) => s.brand === brandFilter);
     // When product search is active, ONLY show stores that have the product
     if (highlightedStoreIds && highlightedStoreIds.size > 0) {
-      result = result.filter((s) => highlightedStoreIds.has(s.id));
+      const hasAldiNational = highlightedStoreIds.has("aldi-sued-national");
+      result = result.filter((s) => {
+        // For ALDI national: only show ONE ALDI store (the first one) with a synthetic ID
+        if (s.brand === "aldi-sued") {
+          if (!hasAldiNational) return false;
+          // Replace this store's ID with "aldi-sued-national" so it gets the price
+          // We'll only keep the first ALDI store
+          return true; // keep all ALDI stores but we'll dedup to 1 below
+        }
+        return highlightedStoreIds.has(s.id);
+      });
+      // If ALDI national is highlighted, keep only ONE ALDI store (center of Germany)
+      if (hasAldiNational) {
+        const aldiStores = result.filter((s) => s.brand === "aldi-sued");
+        const nonAldi = result.filter((s) => s.brand !== "aldi-sued");
+        if (aldiStores.length > 0) {
+          // Pick the ALDI store closest to center of Germany (50.9, 10.4)
+          const centerLat = 50.9, centerLng = 10.4;
+          let closest = aldiStores[0];
+          let minDist = Infinity;
+          for (const s of aldiStores) {
+            const dist = Math.abs(s.lat - centerLat) + Math.abs(s.lng - centerLng);
+            if (dist < minDist) { minDist = dist; closest = s; }
+          }
+          // Create a synthetic store with the national ID
+          const aldiMarker = { ...closest, id: "aldi-sued-national", name: "ALDI SÜD (national)" };
+          result = [...nonAldi, aldiMarker];
+        }
+      }
     }
     // Remove duplicate stores (same lat/lng within ~50m)
     const seen = new Set<string>();
@@ -152,17 +180,36 @@ export default function Home() {
       const data = await res.json();
       const highlightSet = new Set<string>();
       const priceMap = new Map<string, number>();
+      let aldiPrice: number | null = null;
+
       for (const p of (data.items || [])) {
         const sid = p.store_id;
-        highlightSet.add(sid);
         const price = p.price;
-        if (price != null) {
-          const existing = priceMap.get(sid);
-          if (existing === undefined || price < existing) {
-            priceMap.set(sid, price);
+        
+        if (sid === "aldi-sued-national") {
+          // ALDI is national — store the price but DON'T add to highlightSet
+          // (we'll show a single ALDI marker instead of 164)
+          if (price != null && (aldiPrice === null || price < aldiPrice)) {
+            aldiPrice = price;
+          }
+        } else {
+          highlightSet.add(sid);
+          if (price != null) {
+            const existing = priceMap.get(sid);
+            if (existing === undefined || price < existing) {
+              priceMap.set(sid, price);
+            }
           }
         }
       }
+
+      // If ALDI has the product, add a single synthetic ALDI marker
+      if (aldiPrice !== null) {
+        // Use a special ID that we'll handle in the store list
+        highlightSet.add("aldi-sued-national");
+        priceMap.set("aldi-sued-national", aldiPrice);
+      }
+
       setHighlightedStoreIds(highlightSet);
       setStorePrices(priceMap);
     } catch {
@@ -209,7 +256,7 @@ export default function Home() {
       <header className="border-b border-gray-200 bg-white/90 backdrop-blur shadow-sm z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.9.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.9.1</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
