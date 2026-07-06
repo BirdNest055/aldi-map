@@ -50,5 +50,4 @@ async function handler(req: NextRequest) {
     return NextResponse.json({ items: [], total: 0 });
   }
 }
->>>>>>> origin/dev
 export const GET = withErrorHandling(handler);
