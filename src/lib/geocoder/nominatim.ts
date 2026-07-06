@@ -22,7 +22,7 @@ export class NominatimGeocoder implements Geocoder {
     try {
       const res = await fetch(`${this.baseUrl}?${params}`, {
         headers: {
-          "User-Agent": "aldi-discount-map/1.0",
+          "User-Agent": "discount-map/1.0",
         },
       });
       if (!res.ok) return [];

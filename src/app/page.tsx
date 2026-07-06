@@ -124,60 +124,52 @@ export default function Home() {
     },
   });
 
-  // Debounce city search — 300ms delay to prevent lag on every keystroke
-  useEffect(() => {
-    if (searchQuery.trim().length < 2) {
+  // City search — only on Enter (disabled real-time for performance)
+  const handleCitySearch = useCallback(async () => {
+    if (!searchQuery || searchQuery.trim().length < 2) {
       setSearchResults([]);
       return;
     }
-    const timer = setTimeout(async () => {
-      try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
-        const results = await res.json();
-        setSearchResults(results);
-      } catch {
-        setSearchResults([]);
-      }
-    }, 300);
-    return () => clearTimeout(timer);
+    try {
+      const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
+      const results = await res.json();
+      setSearchResults(results);
+    } catch {
+      setSearchResults([]);
+    }
   }, [searchQuery]);
 
-  // Product search — debounced, highlights markers that have matching products
-  useEffect(() => {
+  // Product search — only on Enter (disabled real-time for performance)
+  const handleProductSearch = useCallback(async () => {
     if (!productSearch || productSearch.trim().length < 2) {
       setHighlightedStoreIds(null);
       setStorePrices(null);
       return;
     }
     setProductSearchLoading(true);
-    const timer = setTimeout(async () => {
-      try {
-        const res = await fetch(
-          `/api/product-search?q=${encodeURIComponent(productSearch)}`
-        );
-        const data = await res.json();
-        const highlightSet = new Set<string>();
-        const priceMap = new Map<string, number>();
-        for (const p of (data.items || [])) {
-          const sid = p.store_id;
-          highlightSet.add(sid);
-          const price = p.price;
-          if (price != null) {
-            const existing = priceMap.get(sid);
-            if (existing === undefined || price < existing) {
-              priceMap.set(sid, price);
-            }
+    try {
+      const res = await fetch(`/api/product-search?q=${encodeURIComponent(productSearch)}`);
+      const data = await res.json();
+      const highlightSet = new Set<string>();
+      const priceMap = new Map<string, number>();
+      for (const p of (data.items || [])) {
+        const sid = p.store_id;
+        highlightSet.add(sid);
+        const price = p.price;
+        if (price != null) {
+          const existing = priceMap.get(sid);
+          if (existing === undefined || price < existing) {
+            priceMap.set(sid, price);
           }
         }
-        setHighlightedStoreIds(highlightSet);
-        setStorePrices(priceMap);
-      } catch {
-        setHighlightedStoreIds(null);
-        setStorePrices(null);
       }
-      setProductSearchLoading(false);
-    }, 400);
-    return () => clearTimeout(timer);
+      setHighlightedStoreIds(highlightSet);
+      setStorePrices(priceMap);
+    } catch {
+      setHighlightedStoreIds(null);
+      setStorePrices(null);
+    }
+    setProductSearchLoading(false);
   }, [productSearch]);
 
   // Refresh discounts for the selected store
@@ -217,7 +209,7 @@ export default function Home() {
       <header className="border-b border-gray-200 bg-white/90 backdrop-blur shadow-sm z-[1000] px-4 py-3 flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2">
           <MapPin className="w-5 h-5 text-emerald-400" />
-          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.8.0</span></h1>
+          <h1 className="text-base font-semibold">Discount Map <span className="text-xs text-gray-500 font-normal">v1.9.0</span></h1>
         </div>
         <div className="flex-1 flex items-center gap-2 max-w-xs">
           <div className="relative flex-1">
@@ -226,6 +218,7 @@ export default function Home() {
               placeholder="Search city..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleCitySearch()}
               className="pl-9 bg-gray-100 border-gray-300 h-9"
             />
             {searchResults.length > 0 && (
