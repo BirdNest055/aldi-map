@@ -300,7 +300,7 @@ export default function Home() {
             placeholder="Search product..."
             value={productSearch}
             onChange={(e) => setProductSearch(e.target.value)}
-            
+            onKeyDown={(e) => e.key === "Enter" && handleProductSearch()}
             className="pl-9 pr-8 bg-gray-100 border-gray-300 h-9"
           />
           {productSearchLoading && <Loader2 className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 animate-spin text-gray-500" />}
